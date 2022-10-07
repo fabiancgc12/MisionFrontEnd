@@ -2,7 +2,7 @@
 [Requerimientos](./modulo%201/1.-Requerimientos.doc)
 
 ## Buyer persona
-![Buyer Persona](./modulo%201/buyer%20persona.png)
+![Buyer Persona](./buyer%20persona.png)
 
 ## Target Audience
-![Buyer Persona](./modulo%201/Target%20Audience.jpg)
+![Buyer Persona](./Target%20Audience.jpg)
