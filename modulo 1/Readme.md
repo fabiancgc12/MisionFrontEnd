@@ -9,4 +9,4 @@
 
 ##wireframe
 
-[Wireframes](./AbogaBot%20wireframe.pdf)
+[Wireframes](./AbogaBot%20WireFrame.pdf)
