@@ -10,3 +10,7 @@
 ## wireframe
 
 [Wireframes](./AbogaBot%20WireFrame.pdf)
+
+## UI
+
+[Figma UI](./figmaUI.pdf)
