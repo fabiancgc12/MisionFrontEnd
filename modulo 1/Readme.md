@@ -7,6 +7,6 @@
 ## Target Audience
 ![Buyer Persona](./Target%20Audience.jpg)
 
-##wireframe
+## wireframe
 
 [Wireframes](./AbogaBot%20WireFrame.pdf)
