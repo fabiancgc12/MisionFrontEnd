@@ -40,26 +40,24 @@
         <hr/>
         <div class="display-options">
             <h2>Adornos</h2>
-            <label>
-                <input type="checkbox" name="addon" value="vanilla">
-                Chispas 1$
-            </label>
-            <label>
-                <input type="checkbox" name="addon" value="chocolate">
-                Chispas de chocolates 1$
-            </label>
-            <label>
-                <input type="checkbox" name="addon" value="reed">
-                Mini chocolates 2$
-            </label>
-            <label>
-                <input type="checkbox" name="addon" value="reed">
-                M&M'S 2$
-            </label>
-            <label>
-                <input type="checkbox" name="addon" value="reed">
-                Mini galletas 1$
-            </label>
+            <div class="options">
+                <div class="option-checkbox">
+                    <input id="addond_chispas" type="checkbox" name="addon" value="chispas">
+                    <label for="addond_chispas">Chispas 1$</label>
+                </div>
+                <div class="option-checkbox">
+                    <input id="addond_chocolates" type="checkbox" name="addon" value="minichocolates">
+                    <label for="addond_chocolates">Mini chocolates 2$</label>
+                </div>
+                <div class="option-checkbox">
+                    <input id="addond_mandm" type="checkbox" name="addon" value="m&ms">
+                    <label for="addond_mandm">M&M'S 2$</label>
+                </div>
+                <div class="option-checkbox">
+                    <input id="addond_fondant" type="checkbox" name="addon" value="fondant">
+                    <label for="addond_fondant">fondant</label>
+                </div>
+            </div>
         </div>
         <hr/>
         <div class="display-options info-user">
