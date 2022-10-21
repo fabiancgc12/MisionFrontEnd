@@ -3,6 +3,6 @@
 
 [AbogaBot](./modulo%201)
 
-## Practica de Modulo 2 - Pasteleria
+## Practica de Modulo 2 - HTML
 
-[AbogaBot](./modulo%202)
+[modulo 2](./modulo%202)
