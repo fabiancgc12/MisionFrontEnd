@@ -1,0 +1,25 @@
+.pedidos{
+    width: 90%;
+    border: 2px black solid;
+    border-collapse: collapse;
+}
+
+.pedidos thead tr,
+.pedidos tr:nth-child(even){
+    background: darkgray;
+}
+
+.pedidos tbody tr:hover{
+    background: #ccc;
+}
+
+.pedidos th,
+.pedidos td{
+    text-align: center;
+    border-left: 1px black solid;
+}
+
+.pedidos tr td:first-child{
+    font-weight: bold;
+}
+
