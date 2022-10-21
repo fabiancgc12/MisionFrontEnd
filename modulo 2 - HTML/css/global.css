@@ -39,7 +39,7 @@ header nav a{
 main{
     display: flex;
     flex-direction: column;
-    padding-left: 2.5%;
+    padding: 0 2.5%;
 }
 
 h2{

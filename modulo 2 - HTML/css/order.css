@@ -9,6 +9,92 @@
     flex-direction: column;
     gap: 5px;
 }
+
+
+.display-options .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:5%;
+}
+
+.display-options .options{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap:2.5%;
+}
+
+.display-options .options > * {
+    --width:350px;
+    width: 100%;
+    max-width: var(--width)
+}
+
+.option-checkbox label{
+    --height:calc(var(--width)*2/3);
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: var(--height);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 1270px) {
+    .display-options .options > *{
+        --width: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .display-options .options > *{
+        --width: 250px;
+    }
+}
+
+@media (max-width: 850px) {
+    .display-options .options > *{
+        --width: 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    .display-options .options{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .display-options .options > *{
+        --width: 400px;
+    }
+}
+
+
+.option-checkbox input[type="checkbox"]{
+    display: none;
+}
+
+.option-checkbox label::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--height);
+    z-index: -3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.option-checkbox input:checked + label::before {
+    filter: brightness(60%);
+}
+
 .info-input{
     display: flex;
     gap: 5px;
@@ -29,4 +115,17 @@ button[type="submit"]{
 .info-user {
     max-width: 40%;
     min-width: 300px;
+}
+
+
+label[for="flavor_vainilla"]::before{
+    background-image: url("../src/pastel de vainilla.webp");
+}
+
+label[for="flavor_chocolate"]::before{
+    background-image: url("../src/pastel de chocolate.webp");
+}
+
+label[for="flavor_redvelvet"]::before{
+    background-image: url("../src/pastel de red velvet.jpg");
 }
