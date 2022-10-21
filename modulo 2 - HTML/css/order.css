@@ -11,34 +11,32 @@
 }
 
 
-.display-options .options{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap:5%;
-}
+/*.display-options .options{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-around;*/
+/*    gap:5%;*/
+/*}*/
 
 .display-options .options{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap:2.5%;
 }
 
 .display-options .options > * {
-    --width:350px;
     width: 100%;
-    max-width: var(--width)
 }
 
 .option-checkbox label{
-    --height:calc(var(--width)*2/3);
+    --ratio: 1 / 0.66;
+    --height:300px;
     position: relative;
     cursor: pointer;
     width: 100%;
-    height: var(--height);
+    aspect-ratio: var(--ratio);
     display: grid;
     place-items: center;
     color: white;
@@ -46,33 +44,15 @@
     font-size: 25px;
 }
 
-@media (max-width: 1270px) {
-    .display-options .options > *{
-        --width: 300px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .display-options .options > *{
-        --width: 250px;
-    }
-}
-
-@media (max-width: 850px) {
-    .display-options .options > *{
-        --width: 200px;
-    }
-}
-
 @media (max-width: 700px) {
-    .display-options .options{
-        flex-direction: column;
-        gap: 10px;
+    .addonds{
+        flex-wrap: wrap;
     }
 
-    .display-options .options > *{
-        --width: 400px;
+    .display-options .addonds > *{
+        width: 40%;
     }
+
 }
 
 .option-checkbox input[type="checkbox"]{
@@ -83,7 +63,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: var(--height);
+    aspect-ratio: var(--ratio);
     z-index: -3;
     background-repeat: no-repeat;
     background-size: cover;
