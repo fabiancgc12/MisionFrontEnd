@@ -5,4 +5,4 @@
 
 ## Practica de Modulo 2 - HTML
 
-[modulo 2](./modulo%202)
+[modulo 2](./modulo%202%20-%20HTML)
