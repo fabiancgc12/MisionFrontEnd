@@ -12,6 +12,7 @@ header{
     justify-content: space-between;
     padding: 5px 10px;
     border-bottom: darkgray 2px solid;
+    background: #84b6f4;
 }
 
 .logo {
@@ -40,6 +41,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 0 2.5%;
+    background: #b2e2f2;
 }
 
 h2{

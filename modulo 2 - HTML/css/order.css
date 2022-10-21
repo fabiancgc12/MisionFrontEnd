@@ -10,14 +10,6 @@
     gap: 5px;
 }
 
-
-/*.display-options .options{*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: space-around;*/
-/*    gap:5%;*/
-/*}*/
-
 .display-options .options{
     width: 100%;
     display: flex;
@@ -32,7 +24,7 @@
 
 .option-checkbox label{
     --ratio: 1 / 0.66;
-    --height:300px;
+    isolation: isolate;
     position: relative;
     cursor: pointer;
     width: 100%;
