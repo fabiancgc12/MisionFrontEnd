@@ -42,9 +42,9 @@
     }
 
     .display-options .addonds > *{
+        margin-top: 10px;
         width: 40%;
     }
-
 }
 
 .option-checkbox input[type="checkbox"]{
