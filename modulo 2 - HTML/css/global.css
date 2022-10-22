@@ -42,6 +42,7 @@ main{
     flex-direction: column;
     padding: 0 2.5%;
     background: #b2e2f2;
+    align-items: center;
 }
 
 h2{
@@ -50,5 +51,5 @@ h2{
 }
 
 textarea{
-    resize: none;
+    resize: vertical;
 }
