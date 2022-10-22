@@ -1,4 +1,5 @@
 .order-form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -8,6 +9,10 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.display-options > h2 {
+    text-align: center;
 }
 
 .display-options .options{
@@ -66,28 +71,46 @@
     filter: brightness(60%);
 }
 
+.info-user {
+    /*max-width: 50%;*/
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
 .info-input{
+    width: 40%;
     display: flex;
     gap: 5px;
 }
 
-.info-input input{
+.info-input input,
+.info-input textarea{
     width: 100%;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    padding: 10px;
 }
-
 .info-input span::after{
     content: ":";
 }
 
-button[type="submit"]{
-    margin-top: 10px;
+.submitSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.info-user {
-    max-width: 40%;
-    min-width: 300px;
+.submitSection button{
+    cursor: pointer;
+    border-radius: 5px;
+    border:1px black solid;
+    background: #b0c2f2;
+    width: 20%;
 }
-
 
 label[for="flavor_vainilla"]::before{
     background-image: url("../src/pastel de vainilla.webp");
