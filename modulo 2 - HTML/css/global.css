@@ -8,11 +8,14 @@ body{
 }
 
 header{
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
     border-bottom: darkgray 2px solid;
     background: #84b6f4;
+    z-index: 1;
 }
 
 .logo {
