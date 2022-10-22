@@ -17,6 +17,10 @@ section h2 {
     background: darkgray;
 }
 
+.pedidos tbody tr{
+    transition: ease-in .25s;
+}
+
 .pedidos tbody tr:hover{
     background: #ccc;
 }
