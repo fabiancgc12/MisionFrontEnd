@@ -1,3 +1,7 @@
+section{
+    width: 100%;
+}
+
 section h2 {
     text-align: center;
 }
@@ -27,3 +31,80 @@ section h2 {
     font-weight: bold;
 }
 
+.menu-restantes{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap:2.5%;
+}
+
+.menu-restantes li{
+    --ratio: 1 / 0.66;
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    isolation: isolate;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+@media (max-width: 700px) {
+    .menu-restantes{
+        flex-wrap: wrap;
+    }
+
+    .menu-restantes li{
+        margin-top: 10px;
+        width: 40%;
+    }
+}
+
+.menu-restantes li::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    z-index: -3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    transition: filter ease-in .25s;
+}
+
+.menu-restantes li:hover::before{
+    filter: brightness(60%);
+}
+
+.flavor_vainilla::before{
+    background-image: url("../src/pastel de vainilla.webp");
+}
+
+.flavor_chocolate::before{
+    background-image: url("../src/pastel de chocolate.webp");
+}
+
+.flavor_redvelvet::before{
+    background-image: url("../src/pastel de red velvet.jpg");
+}
+
+.addon_chispas::before{
+    background-image: url("../src/pastel chispas.jpg");
+}
+
+.addon_chocolates::before{
+    background-image: url("../src/pastel mini chocolates.webp");
+}
+
+.addon_mandm::before{
+    background-image: url("../src/pastel m&m.jpg");
+}
+
+.addon_fondant::before{
+    background-image: url("../src/pastel fondant.webp");
+}

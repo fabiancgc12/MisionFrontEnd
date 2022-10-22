@@ -42,11 +42,11 @@
 }
 
 @media (max-width: 700px) {
-    .addonds{
+    .options{
         flex-wrap: wrap;
     }
 
-    .display-options .addonds > *{
+    .display-options .options > *{
         margin-top: 10px;
         width: 40%;
     }
