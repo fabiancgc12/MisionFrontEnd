@@ -30,6 +30,14 @@ header{
     z-index: 1;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    background: #b2e2f2;
+    align-items: center;
+    padding: 0 2.5% 30px;
+}
+
 .logo {
     display: flex;
     gap: 20px;
@@ -70,14 +78,6 @@ header nav a:hover{
     filter: brightness(70%);
     background: #318cff;
     color: white;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    padding: 0 2.5%;
-    background: #b2e2f2;
-    align-items: center;
 }
 
 h2{
