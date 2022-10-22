@@ -65,6 +65,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
+    transition: filter ease-in .25s;
+}
+
+.option-checkbox label:hover::before {
+    filter: brightness(60%);
 }
 
 .option-checkbox input:checked + label::before {
