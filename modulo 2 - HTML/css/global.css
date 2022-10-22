@@ -12,7 +12,8 @@ header{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    padding: 5px 10px;
+    /*padding: 5px 10px;*/
+    padding: 0px 10px;
     border-bottom: darkgray 2px solid;
     background: #84b6f4;
     z-index: 1;
@@ -31,13 +32,24 @@ header{
 
 header nav {
     display: flex;
-    gap: 10px;
     align-items: center;
     justify-items: center;
 }
 
 header nav a{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
     text-decoration: none;
+    transition: all ease-in .25s;
+    padding: 5px 10px;
+}
+
+header nav a:hover{
+    filter: brightness(70%);
+    background: #318cff;
+    color: white;
 }
 
 main{
