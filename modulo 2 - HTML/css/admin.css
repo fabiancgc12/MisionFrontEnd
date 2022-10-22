@@ -1,5 +1,9 @@
+section h2 {
+    text-align: center;
+}
+
 .pedidos{
-    width: 90%;
+    width: 100%;
     border: 2px black solid;
     border-collapse: collapse;
 }
