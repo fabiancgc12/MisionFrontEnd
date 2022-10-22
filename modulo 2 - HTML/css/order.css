@@ -129,18 +129,18 @@ label[for="flavor_redvelvet"]::before{
     background-image: url("../src/pastel de red velvet.jpg");
 }
 
-label[for="addond_chispas"]::before{
+label[for="addon_chispas"]::before{
     background-image: url("../src/pastel chispas.jpg");
 }
 
-label[for="addond_chocolates"]::before{
+label[for="addon_chocolates"]::before{
     background-image: url("../src/pastel mini chocolates.webp");
 }
 
-label[for="addond_mandm"]::before{
+label[for="addon_mandm"]::before{
     background-image: url("../src/pastel m&m.jpg");
 }
 
-label[for="addond_fondant"]::before{
+label[for="addon_fondant"]::before{
     background-image: url("../src/pastel fondant.webp");
 }
