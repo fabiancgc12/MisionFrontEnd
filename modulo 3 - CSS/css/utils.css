@@ -38,6 +38,10 @@
     background: var(--mainBlue);
 }
 
+.bg-images{
+    background: var(--backgroundImages);
+}
+
 .shadow{
     box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
     -webkit-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
