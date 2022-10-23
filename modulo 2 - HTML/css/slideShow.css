@@ -1,7 +1,7 @@
 .slide-show{
     display: flex;
-    width: 70%;
-    aspect-ratio: 1 / .66;
+    width: 80%;
+    aspect-ratio: 1 / .5;
     overflow: hidden;
 }
 
@@ -10,8 +10,8 @@
     flex: 0 0 100%;
     position:relative;
     aspect-ratio: 1 / 0.66;
-    /*transform: translateX(0);*/
-    /*animation: slideShow 16s infinite;*/
+    transform: translateX(0);
+    animation: slideShow 16s infinite;
 }
 .slide-show img {
     width: 100%;
@@ -19,7 +19,16 @@
     object-fit: cover;
 }
 
-
+.slide-show h3 {
+    position: absolute;
+    padding-left: 30px;
+    margin: 0;
+    bottom: 30px;
+    border-bottom: white solid 5px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
 
 @keyframes slideShow {
     0% {
