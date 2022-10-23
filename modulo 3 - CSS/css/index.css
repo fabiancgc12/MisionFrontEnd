@@ -32,38 +32,7 @@ header > *:first-child{
     margin-right: auto;
 }
 
-.font-bg {
-    font-size: 37px;
-}
 
-.font-md {
-    font-size: 24px;
-    /*font-weight: 500;*/
-}
-
-.semiBold{
-    font-weight: 500;
-}
-
-.bold{
-    font-weight: bold;
-}
-
-.color-blue{
-    color: var(--mainBlue);
-}
-
-.color-white{
-    color: white;
-}
-
-.color-gray{
-    color: var(--darkGray);
-}
-
-.bg-blue{
-    background: var(--mainBlue);
-}
 
 body{
     height: 1000px;
@@ -73,10 +42,4 @@ button{
     padding: 15px 30px;
     border-radius: 5px;
     border: 0;
-}
-
-.shadow{
-    box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
-    -webkit-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
-    -moz-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
 }
