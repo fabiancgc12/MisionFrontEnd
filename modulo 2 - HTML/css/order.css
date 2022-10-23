@@ -115,6 +115,8 @@
     border:1px black solid;
     background: #b0c2f2;
     width: 20%;
+    padding: 10px;
+    font-size: 20px;
 }
 
 label[for="flavor_vainilla"]::before{
