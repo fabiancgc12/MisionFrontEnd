@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    --horizontalPadding:175px;
+    --mainBlue:#2849c6;
+    --lightBlue:#eff3fe;
+    --darkBlue:#1f3e72;
+    --darkGray:#8592a6;
+    --lightGray:#eff3fe;
+    --yellow:#ffd012;
+    font-family: Roboto,sans-serif;
+}
