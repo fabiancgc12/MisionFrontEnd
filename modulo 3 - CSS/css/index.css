@@ -1,3 +1,18 @@
+@font-face {
+    font-family: crossed;
+    src: url("../fonts/CrosstenMedium.otf");
+}
+
+@font-face {
+    font-family: crossedBold;
+    src: url("../fonts/CrosstenBold.otf");
+}
+
+@font-face {
+    font-family: crossedSemiBold;
+    src: url("../fonts/CrosstenSemiBold.otf");
+}
+
 *,
 *::before,
 *::after{
@@ -17,16 +32,16 @@ body{
     --yellow:#ffd012;
     --backgroundImages:linear-gradient(90deg, rgba(14,145,228,1) 0%, rgba(49,104,221,1) 100%);
 
-    font-family: Dubai,Roboto,sans-serif;
+    font-family: crossed,sans-serif;
 }
 
 header{
     width: 100%;
-    padding: 32px var(--rightPadding) 32px var(--leftPadding);
+    padding: 34px var(--rightPadding) 32px var(--leftPadding);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5%;
+    gap: 5.5%;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(230,245,253,1) 51%, rgba(235,242,252,1) 100%);
 }
@@ -40,7 +55,7 @@ section{
 }
 
 .section1-content{
-    padding: 100px 120px;
+    padding: 95px 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +64,7 @@ section{
 }
 
 .section1-content h2{
-    line-height: 1;
+    /*line-height: 1;*/
     text-transform: capitalize;
 }
 

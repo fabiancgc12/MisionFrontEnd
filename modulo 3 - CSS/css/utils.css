@@ -1,21 +1,21 @@
-.font-bg {
-    font-size: 30px;
+.font-md {
+    font-size: 17px;
 }
 
-.font-md {
-    font-size: 19px;
+.font-bg {
+    font-size: 27px;
 }
 
 .font-xxl {
-    font-size: 65px;
+    font-size: 58px;
 }
 
 .semiBold{
-    font-weight: 500;
+    font-family: crossedSemiBold,sans-serif;
 }
 
 .bold{
-    font-weight: bold;
+    font-family: crossedBold,sans-serif;
 }
 
 .color-blue{
@@ -38,7 +38,7 @@
     background: var(--mainBlue);
 }
 
-.bg-images{
+.bg-gradientBlue{
     background: var(--backgroundImages);
 }
 
