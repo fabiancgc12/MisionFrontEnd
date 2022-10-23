@@ -7,12 +7,76 @@
 }
 
 body{
-    --horizontalPadding:175px;
-    --mainBlue:#2849c6;
-    --lightBlue:#eff3fe;
-    --darkBlue:#1f3e72;
-    --darkGray:#8592a6;
-    --lightGray:#eff3fe;
+    --horizontalPadding:130px;
+    --mainBlue:#3269D9;
+    --lightBlue:#E6F5FD;
+    --darkBlue:#1E3E73;
+    --darkGray:#6C7A93;
+    --lightGray:#F2F2F2;
     --yellow:#ffd012;
-    font-family: Roboto,sans-serif;
+    font-family: Dubai,Roboto,sans-serif;
+    /*font-weight: bold;*/
+}
+
+header{
+    width: 100%;
+    padding: 50px var(--horizontalPadding);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(230,245,253,1) 51%, rgba(235,242,252,1) 100%);}
+
+header > *:first-child{
+    margin-right: auto;
+}
+
+.font-bg {
+    font-size: 37px;
+}
+
+.font-md {
+    font-size: 24px;
+    /*font-weight: 500;*/
+}
+
+.semiBold{
+    font-weight: 500;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.color-blue{
+    color: var(--mainBlue);
+}
+
+.color-white{
+    color: white;
+}
+
+.color-gray{
+    color: var(--darkGray);
+}
+
+.bg-blue{
+    background: var(--mainBlue);
+}
+
+body{
+    height: 1000px;
+}
+
+button{
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.shadow{
+    box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
+    -moz-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
 }
