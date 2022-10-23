@@ -7,7 +7,8 @@
 }
 
 body{
-    --horizontalPadding:130px;
+    --leftPadding:100px;
+    --rightPadding:120px;
     --mainBlue:#3269D9;
     --lightBlue:#E6F5FD;
     --darkBlue:#1E3E73;
@@ -15,14 +16,13 @@ body{
     --lightGray:#F2F2F2;
     --yellow:#ffd012;
     font-family: Dubai,Roboto,sans-serif;
-    /*font-weight: bold;*/
 }
 
 header{
     width: 100%;
-    padding: 50px var(--horizontalPadding);
+    padding: 32px var(--rightPadding) 32px var(--leftPadding);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 5%;
     background: rgb(255,255,255);
@@ -37,7 +37,7 @@ section{
 }
 
 .section1-content{
-    padding: 125px 150px;
+    padding: 100px 105px;
     display: flex;
     flex-direction: column;
     /*justify-content: center;*/
@@ -61,7 +61,7 @@ img{
 }
 
 button{
-    padding: 15px 30px;
+    padding: 13px 23px;
     border-radius: 5px;
     border: 0;
 }
