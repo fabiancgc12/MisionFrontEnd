@@ -47,3 +47,9 @@
         transform: translateX(-400%);
     }
 }
+
+@media screen and (max-width: 700px){
+    .slide-show{
+        width: 100%;
+    }
+}
