@@ -4,7 +4,10 @@
 
 .font-md {
     font-size: 24px;
-    /*font-weight: 500;*/
+}
+
+.font-xl {
+    font-size: 80px;
 }
 
 .semiBold{
@@ -17,6 +20,10 @@
 
 .color-blue{
     color: var(--mainBlue);
+}
+
+.color-darkBlue{
+    color: var(--darkBlue);
 }
 
 .color-white{
@@ -35,4 +42,9 @@
     box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
     -webkit-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
     -moz-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
+}
+
+.even-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
 }
