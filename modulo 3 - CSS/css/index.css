@@ -7,8 +7,8 @@
 }
 
 body{
-    --leftPadding:100px;
-    --rightPadding:120px;
+    --leftPadding:120px;
+    --rightPadding:100px;
     --mainBlue:#3269D9;
     --lightBlue:#E6F5FD;
     --darkBlue:#1E3E73;
@@ -37,10 +37,10 @@ section{
 }
 
 .section1-content{
-    padding: 100px 105px;
+    padding: 100px 120px;
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
     gap: 30px;
 }
@@ -48,6 +48,24 @@ section{
 .section1-content h2{
     line-height: 1;
     text-transform: capitalize;
+}
+
+.section1-content .medals {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.section1-content .medals span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section1-content .medals svg {
+    color: var(--yellow);
 }
 
 body{
