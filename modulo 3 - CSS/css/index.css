@@ -28,7 +28,7 @@ body{
     --lightBlue:#E6F5FD;
     --darkBlue:#1E3E73;
     --darkGray:#6C7A93;
-    --lightGray:#F2F2F2;
+    --lightGray:rgba(235,242,252,1);
     --yellow:#ffd012;
     --backgroundImages:linear-gradient(90deg, rgba(14,145,228,1) 0%, rgba(49,104,221,1) 100%);
 
@@ -54,17 +54,22 @@ section{
     margin-top: 5px;
 }
 
+.section1{
+    position: relative;
+    height: 100vh;
+}
+
 .section1-content{
-    padding: 95px 120px;
+    position: relative;
+    padding: 85px 110px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 30px;
 }
 
 .section1-content h2{
-    /*line-height: 1;*/
+    line-height: 1;
     text-transform: capitalize;
 }
 
@@ -84,6 +89,40 @@ section{
 
 .section1-content .medals svg {
     color: var(--yellow);
+}
+
+.schedule{
+    position: absolute;
+    bottom: 20px;
+    padding: 0px 120px;
+    width: 85%;
+}
+
+.schedule > h3 {
+    gap: 10px;
+}
+
+.schedule-info{
+    padding: 40px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid white;
+    backdrop-filter: blur(7px);
+    gap: 20px;
+}
+
+.schedule-info > *{
+    display: flex;
+    gap: 10px;
+}
+
+.schedule-info > * p:last-child{
+    line-height: 2em;
+}
+
+.schedule-info button{
+    width: 80%;
+    height: 80%;
 }
 
 body{

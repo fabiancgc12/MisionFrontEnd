@@ -3,6 +3,10 @@
 }
 
 .font-bg {
+    font-size: 20px;
+}
+
+.font-xl {
     font-size: 27px;
 }
 
@@ -48,7 +52,36 @@
     -moz-box-shadow: 0px 17px 33px -17px rgba(0,0,0,0.74);
 }
 
+.big-shadow{
+    box-shadow: 0px 7px 8px -2px var(--darkGray);
+    -webkit-box-shadow: 0px 7px 8px -2px var(--darkGray);
+    -moz-box-shadow: 0px 7px 8px -2px var(--darkGray);
+}
+
 .even-columns{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+
+.badge{
+    border: white solid 1px;
+    background: var(--lightGray);
+    border-radius: 5px;
+    padding: 2px;
+    width: 25px;
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: currentColor;
+}
+
+.badge svg{
+    width: 75%;
+    height: 75%;
 }
