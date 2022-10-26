@@ -66,6 +66,9 @@ section{
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    background-image: url("../src/section1Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section1-content h2{
