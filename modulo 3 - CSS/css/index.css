@@ -116,12 +116,23 @@ section{
 }
 
 .schedule-info > *{
-    display: flex;
+    display: grid;
+    grid-template-areas: "badge title"
+                         ". info";
     gap: 10px;
 }
 
+.schedule-info > * .badge{
+    grid-area: badge;
+}
+
+.schedule-info > * p:first-child{
+    grid-area: title;
+}
+
 .schedule-info > * p:last-child{
-    line-height: 2em;
+    grid-area: info;
+    /*line-height: 2em;*/
 }
 
 .schedule-info button{
