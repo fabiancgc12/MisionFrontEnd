@@ -129,6 +129,33 @@ section{
     height: 80%;
 }
 
+.section2{
+    display: flex;
+    padding: 60px var(--rightPadding) 60px var(--leftPadding);
+    height: 40vh;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4%;
+}
+
+.section2 > * {
+    width: 100%;
+    /*height: 100%;*/
+    display: grid;
+    place-items: center;
+}
+
+.section2 img {
+    max-width: 80%;
+    height: 100%;
+    object-fit: contain;
+}
+
+img.astrazeneca,
+img.moderna{
+    max-width: 100%;
+}
+
 body{
     height: 1000px;
 }
