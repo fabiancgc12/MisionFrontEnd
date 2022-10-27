@@ -1,3 +1,7 @@
+.font-sm{
+    font-size: 13px;
+}
+
 .font-md {
     font-size: 17px;
 }
@@ -8,6 +12,10 @@
 
 .font-xl {
     font-size: 27px;
+}
+
+.font-40 {
+    font-size: 40px;
 }
 
 .font-xxl {
@@ -84,4 +92,13 @@
 .badge svg{
     width: 75%;
     height: 75%;
+    fill: currentColor;
+}
+
+.badge.big-badge{
+    width: 45px;
+}
+
+.justify-text{
+    text-align: justify;
 }

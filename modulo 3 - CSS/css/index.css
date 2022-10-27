@@ -30,6 +30,7 @@ body{
     --darkGray:#6C7A93;
     --lightGray:rgba(235,242,252,1);
     --yellow:#ffd012;
+    --shadowColor:#edf1fe;
     --backgroundImages:linear-gradient(90deg, rgba(14,145,228,1) 0%, rgba(49,104,221,1) 100%);
 
     font-family: crossed,sans-serif;
@@ -76,6 +77,11 @@ section{
     text-transform: capitalize;
 }
 
+.section1-content > p {
+    width: 90%;
+    align-self: start;
+}
+
 .section1-content .medals {
     width: 100%;
     display: flex;
@@ -115,7 +121,7 @@ section{
     gap: 20px;
 }
 
-.schedule-info > *{
+.schedule-info > div:not(:last-child){
     display: grid;
     grid-template-areas: "badge title"
                          ". info";
@@ -167,9 +173,99 @@ img.moderna{
     max-width: 100%;
 }
 
-body{
-    height: 1000px;
+.section3{
+    padding: 40px var(--rightPadding) 60px var(--leftPadding);
 }
+
+.section3-title{
+    display: flex;
+}
+
+.section3-title-content{
+    width: 44%;
+}
+
+.right-heading-image{
+    position: relative;
+    width: 66%;
+    height: 100%;
+    /*width: auto.right-heading-image;*/
+    /*background-image: url("../src/triangleSection.png");*/
+}
+
+.right-heading-image img{
+    width: 75%;
+    object-fit: cover;
+}
+
+.section3-title-content p{
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+.section3 .benefits{
+    margin-top: 50px;
+    gap: 2.5%;
+}
+
+.section3 .benefits > div {
+    position: relative;
+    display: grid;
+    grid-template-areas: "badge"
+                        "title"
+                        "info";
+    padding: 25px;
+    padding-bottom: 40px;
+    gap: 15px;
+    border: 2px solid rgba(250,251,254,255);
+    border-radius: 5px;
+    /*transition: border-color ease-in .2s, box-shadow ease-in .2s;*/
+}
+
+.section3 .benefits .benefits-badge{
+    grid-area: badge;
+}
+
+.section3 .benefits .benefits-title{
+    position: relative;
+    grid-area: title;
+    width: 90%;
+}
+
+.section3 .benefits .benefits-info{
+    grid-area: info;
+    line-height: 1.5em;
+}
+
+.section3 .benefits > div:hover{
+    border-color: white;
+    box-shadow: -3px 44px 47px -11px var(--shadowColor);
+}
+
+.section3 .benefits > div .benefits-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 75%;
+    transform: scaleY(600%);
+    /*transition: box-shadow ease-in .2s;*/
+}
+
+.section3 .benefits > div:hover .benefits-shadow{
+    box-shadow: 25px 27px 28px 10px var(--shadowColor);
+}
+
+.section3 .benefits > div .badge{
+    /*transition: box-shadow ease-in .2s;*/
+}
+
+.section3 .benefits > div:hover .badge{
+    box-shadow: 0px 17px 34px 13px var(--shadowColor);
+    -webkit-box-shadow: 0px 17px 34px 13px var(--shadowColor);
+    -moz-box-shadow: 00px 17px 34px 13px var(--shadowColor);
+}
+
 
 img{
     height: 100%;
