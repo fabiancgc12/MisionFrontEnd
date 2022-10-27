@@ -148,8 +148,8 @@ section{
 
 .section2{
     display: flex;
-    padding: 60px var(--rightPadding) 60px var(--leftPadding);
-    height: 40vh;
+    padding: 60px var(--rightPadding) 0px var(--leftPadding);
+    height: 30vh;
     justify-content: center;
     align-items: baseline;
     gap: 4%;
@@ -174,37 +174,41 @@ img.moderna{
 }
 
 .section3{
-    padding: 40px var(--rightPadding) 60px var(--leftPadding);
+    padding-left: 110px;
 }
 
 .section3-title{
-    display: flex;
+    display: grid;
+    grid-template-areas: ". image"
+                        "title image"
+                        "info image"
+                        "info .";
+    grid-template-columns: 45% 1fr;
+    grid-template-rows: repeat(4,1fr);
 }
 
-.section3-title-content{
-    width: 44%;
+.section3-title h2{
+    grid-area: title;
 }
 
-.right-heading-image{
-    position: relative;
-    width: 66%;
-    height: 100%;
-    /*width: auto.right-heading-image;*/
-    /*background-image: url("../src/triangleSection.png");*/
+.section3-title .testing {
+    grid-area: image;
 }
 
-.right-heading-image img{
-    width: 75%;
+.section3-title img {
+    grid-area: image;
     object-fit: cover;
 }
 
-.section3-title-content p{
+.section3-title p{
+    width: 90%;
+    grid-area: info;
     margin-top: 30px;
     line-height: 1.5;
 }
 
 .section3 .benefits{
-    margin-top: 50px;
+    padding: 25px var(--rightPadding) 40px 0;
     gap: 2.5%;
 }
 
