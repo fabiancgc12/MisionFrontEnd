@@ -221,7 +221,7 @@ img.moderna{
 
 .section-title-right p{
     margin-left: 14%;
-    padding-right: 14%;
+    /*padding-right: 14%;*/
 }
 
 .section-title-right h2
@@ -294,6 +294,11 @@ img.moderna{
 
 .section4{
     padding-right: var(--rightPadding);
+}
+
+.section4-content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 img{
