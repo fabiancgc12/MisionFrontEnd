@@ -177,7 +177,7 @@ img.moderna{
     padding-left: 110px;
 }
 
-.section3-title{
+.section-title{
     display: grid;
     grid-template-areas: ". image"
                         "title image"
@@ -187,24 +187,46 @@ img.moderna{
     grid-template-rows: repeat(4,1fr);
 }
 
-.section3-title h2{
+.section-title-right{
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "image ."
+                        "image title"
+                        "image info"
+                        ". info";
+}
+
+.section-title h2{
     grid-area: title;
 }
 
-.section3-title .testing {
+.section-title .section-title-image {
     grid-area: image;
 }
 
-.section3-title img {
+.section-title img {
     grid-area: image;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-.section3-title p{
-    width: 90%;
+.section-title-right img {
+    transform: rotateY(180deg);
+}
+
+.section-title p{
+    padding-right: 11%;
     grid-area: info;
-    margin-top: 30px;
-    line-height: 1.5;
+    margin-top: 1em;
+    line-height: 1.75;
+}
+
+.section-title-right p{
+    margin-left: 14%;
+    padding-right: 14%;
+}
+
+.section-title-right h2
+{
+    margin-left: 14%;
 }
 
 .section3 .benefits{
@@ -270,6 +292,9 @@ img.moderna{
     -moz-box-shadow: 00px 17px 34px 13px var(--shadowColor);
 }
 
+.section4{
+    padding-right: var(--rightPadding);
+}
 
 img{
     height: 100%;
