@@ -301,6 +301,12 @@ img.moderna{
     grid-template-columns: 1fr 1fr;
 }
 
+.section4-content-wrapper img{
+    height: 130%;
+    position: relative;
+    bottom: 30%;
+}
+
 img{
     height: 100%;
     width: 100%;
