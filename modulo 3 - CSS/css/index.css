@@ -296,15 +296,64 @@ img.moderna{
     padding-right: var(--rightPadding);
 }
 
-.section4-content-wrapper{
+.section4-content{
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    height: 70vh;
 }
 
-.section4-content-wrapper img{
+.section4-content img{
     height: 130%;
     position: relative;
     bottom: 30%;
+}
+
+.section4-preparations{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5%;
+}
+
+.section4-preparations details{
+    width: 80%;
+    padding: 1em 1.5em;
+    border: 2px solid rgba(250,251,254,255);
+    border-radius: 5px;
+}
+
+.section4-preparations details p {
+    padding: 1em 4em;
+}
+
+.section4-preparations summary{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.section4-preparations summary > *:last-child{
+    margin-left: auto;
+}
+
+.section4-preparations details summary > *:last-child svg {
+    transition: transform ease-in .2s;
+}
+
+.section4-preparations details[open] summary > *:first-child,
+.section4-preparations details[open] summary > *:last-child{
+    box-shadow: 0px 8px 11px 1px var(--shadowColor);
+}
+
+.section4-preparations details[open] summary > *:last-child svg {
+    transform: rotateZ(180deg);
+}
+
+.section4-preparations summary::marker{
+    display: none;
+    content: "";
 }
 
 img{
