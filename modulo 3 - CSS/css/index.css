@@ -356,6 +356,14 @@ img.moderna{
     content: "";
 }
 
+.section5{
+    padding-left: 110px;
+}
+
+.section5 .section-title p{
+    padding-right: 0;
+}
+
 img{
     height: 100%;
     width: 100%;
