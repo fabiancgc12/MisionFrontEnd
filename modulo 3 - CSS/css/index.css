@@ -563,4 +563,14 @@ button:hover {
     .schedule-info{
         flex-wrap: wrap;
     }
+
+    .section2{
+        padding-right: 50px;
+        padding-left: 50px;
+        flex-wrap: wrap;
+    }
+
+    .section2 > *{
+        width: 40%;
+    }
 }
