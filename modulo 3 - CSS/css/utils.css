@@ -103,6 +103,11 @@
     width: 45px;
 }
 
+.badge.xl-badge{
+    width: 50px;
+    padding: .5em;
+}
+
 .badge.small-badge{
     width: 18px;
 }

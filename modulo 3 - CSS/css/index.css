@@ -370,6 +370,72 @@ img.moderna{
     /*object-fit: fill;*/
 }
 
+.section5-contacts{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    /*grid-template-rows: repeat(2,50%);*/
+    gap: 2em;
+}
+
+.section5-contacts .contact{
+    display: grid;
+    grid-template-areas: "badge type"
+                        "badge number"
+                        "button button";
+    grid-template-columns: 50px 1fr;
+    gap: 8% 10%;
+    padding: 2em 1.75em;
+    border: 3px solid rgba(250,251,254,255);
+    border-radius: 10px;
+}
+
+.section5-contacts .contact:hover{
+    box-shadow: 0px 33px 43px 6px var(--shadowColor);
+}
+
+.section5-contacts .contact-info .badge{
+    grid-area: badge;
+}
+
+.section5-contacts .contact-info:hover .badge{
+    grid-area: badge;
+    box-shadow: 0px 24px 20px 11px var(--shadowColor)
+}
+
+.section5-contacts .contact-info .contact-type{
+    grid-area: type;
+}
+
+.section5-contacts .contact-info .contact-number{
+    grid-area: number;
+}
+
+.section5-contacts .contact button{
+    margin-top: 20px;
+    grid-area: button;
+}
+
+.section5-contacts .contact:hover button{
+    background-color: var(--mainBlue);
+    color: white;
+    box-shadow: 0px 20px 12px -11px var(--shadowColor)
+}
+
+.section5 .bg{
+    position: relative;
+}
+
+.section5 .bg::after{
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    background: url("../src/doctor-with-phone.png") no-repeat;
+    background-size: cover;
+}
+
 img{
     height: 100%;
     width: 100%;
