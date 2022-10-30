@@ -446,7 +446,39 @@ img.moderna{
     transform: scaleY(110%);
 }
 
+footer{
+    background-color: var(--lightGray);
+    padding: 2.5em var(--rightPadding) 1em var(--leftPadding);
+}
 
+.footer-info{
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*justify-content: space-between;*/
+}
+
+.footer-info > div span{
+    text-transform: capitalize;
+}
+
+.footer-info > div span,
+.footer-info > div p{
+    line-height: 2em;
+}
+
+.footer-info > div:first-child{
+    width: clamp(20%,150px,50%);
+    margin-right: auto;
+}
 
 img{
     height: 100%;
