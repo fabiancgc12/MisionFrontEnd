@@ -472,6 +472,10 @@ footer{
     padding: 2.5em var(--rightPadding) 1.5em var(--leftPadding);
 }
 
+footer a{
+    text-decoration: none;
+}
+
 .footer-info{
     display: flex;
     gap: 10%;
