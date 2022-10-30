@@ -599,4 +599,40 @@ button:hover {
     .section3 .benefits > div:hover .benefits-shadow {
         box-shadow: 25px 32px 24px 19px var(--shadowColor);
     }
+
+    .section4{
+        padding-right: 50px;;
+    }
+
+    .section4 .bg{
+        display: none;
+    }
+
+    .section4 .section-title{
+        grid-template-areas: "image title"
+                            ". info";
+        grid-template-rows: none;
+    }
+
+    .section4 .section-of-two{
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*place-items: center;*/
+        grid-template-columns: 1fr;
+        place-items: center;
+        place-content: center;
+    }
+
+    .section4 .section4-preparations{
+        padding-left: 50px;
+        width: 100%;
+    }
+
+    .section4 .section4-preparations details{
+        width: 100%;
+    }
+
+    .section-title-right{
+        grid-template-columns: 1fr 65%;
+    }
 }
