@@ -573,4 +573,30 @@ button:hover {
     .section2 > *{
         width: 40%;
     }
+
+    .section3{
+        padding-left: 50px;
+        /*padding-right: 50px;*/
+        margin-top: 30px;
+    }
+
+    .section3 .section-title{
+        grid-template-columns: 65% 1fr;
+    }
+
+    .section3 .benefits.even-columns{
+        padding-top: 0;
+        flex-wrap: wrap;
+        padding-right: 50px;
+    }
+
+    .section3 .benefits.even-columns >*{
+        margin-top: 5px;
+        flex-basis: 40%;
+        width: 40%;
+    }
+
+    .section3 .benefits > div:hover .benefits-shadow {
+        box-shadow: 25px 32px 24px 19px var(--shadowColor);
+    }
 }
