@@ -443,7 +443,7 @@ img.moderna{
     background-size: contain;
     background-position-y: bottom;
     background-position-x: center;
-    transform: scale(110%);
+    transform: scaleY(110%);
 }
 
 
