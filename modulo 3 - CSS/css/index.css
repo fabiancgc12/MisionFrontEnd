@@ -301,7 +301,6 @@ img.moderna{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5%;
-    height: 70vh;
 }
 
 .section-of-two img{
