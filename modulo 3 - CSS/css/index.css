@@ -37,22 +37,31 @@ body{
 }
 
 header{
-    width: 100%;
     padding: 34px var(--rightPadding) 32px var(--leftPadding);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5.5%;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(230,245,253,1) 51%, rgba(235,242,252,1) 100%);
 }
 
-header > *:first-child{
-    margin-right: auto;
-}
-
 header a{
     text-decoration: none;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header .badge{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--mainBlue);
 }
 
 section{
@@ -536,6 +545,11 @@ button:hover {
 }
 
 @media screen and (max-width: 1050px) {
+    header{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
     .section1-content{
         padding: 85px 60px 300px 60px;
     }
@@ -554,6 +568,59 @@ button:hover {
 }
 
 @media screen and (max-width: 900px) {
+
+    header{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    header .badge{
+        display: inline-flex;
+    }
+
+    header nav{
+        position: fixed;
+        padding-top: 30px;
+        max-width: 150px;
+        width: 33%;
+        min-width: fit-content;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        /*z-index: 1;*/
+        background-color: var(--darkBlue);
+        height: 100vh;
+        justify-content: start;
+        z-index: 100;
+        gap: 0;
+        transform: translateX(-100%);
+        transition: transform ease-in .2s;
+    }
+
+    header nav.open{
+        transform: translateX(0%);    }
+
+    header nav > *{
+        width: 100%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    header nav a:hover{
+        background-color: var(--mainBlue);
+        filter: brightness(125%);
+        color: white;
+    }
+
+    header nav button{
+        border-radius: 0;
+    }
+
     .section1-content {
         padding-bottom: 85px;
     }

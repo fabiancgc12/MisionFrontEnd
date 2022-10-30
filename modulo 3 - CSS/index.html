@@ -8,13 +8,18 @@
 </head>
 <body>
 <header>
-    <span class="font-xl color-blue bold">Vaccination</span>
-    <a href="#"  class="font-md color-gray semiBold">Database</a>
-    <a href="#"  class="font-md color-gray semiBold">Education</a>
-    <a href="#"  class="font-md color-gray semiBold">News</a>
-    <a href="#"  class="font-md color-gray semiBold">Regulations</a>
-    <button class="font-md bg-blue shadow"><a href="#" class="color-white semiBold">Hoax Buster</a></button>
-</header>
+    <span class="font-xl color-blue bold ">Vaccination</span>
+        <nav>
+            <a href="#" class="font-md color-gray semiBold ">Database</a>
+            <a href="#" class="font-md color-gray semiBold">Education</a>
+            <a href="#" class="font-md color-gray semiBold">News</a>
+            <a href="#" class="font-md color-gray semiBold">Regulations</a>
+            <button class="font-md bg-blue shadow"><a href="#" class="color-white semiBold">Hoax Buster</a></button>
+        </nav>
+    <span class="badge big-badge color-white menuButton">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.0"><defs><clipPath id="id1"><path d="M 3.386719 7.164062 L 26.613281 7.164062 L 26.613281 22.40625 L 3.386719 22.40625 Z M 3.386719 7.164062 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="rgb(0%, 0%, 0%)" d="M 3.398438 22.40625 L 26.601562 22.40625 L 26.601562 19.867188 L 3.398438 19.867188 Z M 3.398438 16.054688 L 26.601562 16.054688 L 26.601562 13.515625 L 3.398438 13.515625 Z M 3.398438 7.164062 L 3.398438 9.703125 L 26.601562 9.703125 L 26.601562 7.164062 Z M 3.398438 7.164062 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+    </span>
+    </header>
 <main>
     <section class="section1">
         <div class="even-columns">
@@ -327,10 +332,23 @@
         </div>
     </div>
     <div class="copyrightPrivacy ">
-        <a href="#" class="font-sm color-gray">@2021 Vaccionation. All rights reserved</a>
+        <a href="#" class="font-sm color-gray ">@2021 Vaccionation. All rights reserved</a>
         <a href="#" class="font-sm color-gray ">Terms & Agreements</a>
         <a href="#" class="font-sm color-gray ">Privacy Policy</a>
     </div>
 </footer>
+<script>
+    const menuButton = document.querySelector(".menuButton");
+
+    const navBar = document.querySelector("header nav")
+
+    menuButton.addEventListener("click", () => {
+        navBar.classList.toggle("open");
+    })
+
+    document.querySelector("main").addEventListener("click", () => {
+        navBar.classList.remove("open")
+    })
+</script>
 </body>
 </html>
