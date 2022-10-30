@@ -447,8 +447,17 @@ img.moderna{
 }
 
 footer{
-    background-color: var(--lightGray);
-    padding: 2.5em var(--rightPadding) 1em var(--leftPadding);
+    position: relative;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    background: url("../src/footer-triangle.png") var(--lightGray);
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position-y: bottom;
+    background-position-x: calc(100% - var(--rightPadding));
+    padding: 2.5em var(--rightPadding) 1.5em var(--leftPadding);
 }
 
 .footer-info{
@@ -462,7 +471,7 @@ footer{
 .footer-info > div{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     /*justify-content: space-between;*/
 }
 
@@ -478,6 +487,16 @@ footer{
 .footer-info > div:first-child{
     width: clamp(20%,150px,50%);
     margin-right: auto;
+}
+
+.copyrightPrivacy{
+    display: flex;
+    gap: 1em;
+}
+
+.copyrightPrivacy > *:first-child{
+    margin-right: auto;
+
 }
 
 img{
