@@ -7,7 +7,8 @@
     --topHeight:50px;
     --mainColor: #bf0009;
     --secundaryColor:#a50103;
-    --black:#252525
+    --black:#252525;
+    --white:#E1D9D1;
 }
 
 img{
@@ -81,7 +82,7 @@ img{
 .search-input{
     width: 75%;
     border: 1px solid black;
-    color: #DFDFDF;
+    color: var(--white);
     text-align: center;
     font-weight: bold;
     background: var(--black);
@@ -102,7 +103,7 @@ img{
     place-items: center;
     width: 25%;
     cursor: pointer;
-    color: white;
+    color: var(--white);
     background: var(--black);
     border-radius: 5px;
 }
@@ -153,10 +154,6 @@ img{
 .control-directions > * img{
     object-fit: cover;
 }
-
-/*.control-directions > * img:hover{*/
-/*    animation: var(--pokemonAnimation)*/
-/*}*/
 
 .toparrow{
     align-self: end;
@@ -243,13 +240,32 @@ img{
 .pokedex-info{
     flex-basis: 100%;
     background-color: var(--mainColor);
+    padding: 10px;
+    color: var(--white);
+}
+
+.pokedex-info > div{
+    background-color: var(--black);
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    height: 100%;
+    padding: .25em;
+}
+
+.pokemon-name{
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pokemon-entry{
+    padding: 1em;
 }
 
 .pokedex-info-back{
     visibility: hidden;
     background-color: #1E3E73;
     transform-origin: left;
-    /*animation: flip-with-rotate-back 2s ease-in-out;*/
 }
 
 @keyframes flip-with-rotate-front {
