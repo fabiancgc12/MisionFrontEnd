@@ -5,58 +5,27 @@
     <title>Pokedex</title>
     <script src="./js/index.js" defer></script>
     <link rel="stylesheet" href="./css/index.css">
-    <style>
-        /* entire container, keeps perspective */
-        .flip-container {
-            perspective: 1000px;
-        }
-        /* flip the pane when hovered */
-        .flip-container:hover .flipper, .flip-container.hover .flipper {
-            transform: rotateY(180deg);
-        }
-
-        .flip-container, .front, .back {
-            width: 250px;
-            height: 250px;
-        }
-
-        /* flip speed goes here */
-        .flipper {
-            transition: 0.6s;
-            transform-style: preserve-3d;
-            position: relative;
-        }
-
-        /* hide back of pane during swap */
-        .front, .back {
-            backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform-origin: left;
-        }
-
-        /* front pane, placed above back */
-        .front {
-            z-index: 2;
-            /* for firefox 31 */
-            transform: rotateY(0deg);
-            background: darkred;
-        }
-
-        /* back, initially hidden pane */
-        .back {
-            transform: rotateY(180deg);
-            background: darkblue;
-        }
-    </style>
 </head>
 <body>
     <div class="pokedex">
-        <div class="pokedex-search"></div>
+        <div class="pokedex-search-wrapper">
+            <div class="pokedex-search-top"></div>
+            <div class="pokedex-search">
+                <div class="display-pokemon">
+
+                </div>
+                <div class="search-box"></div>
+                <div class="controls">
+
+                </div>
+            </div>
+        </div>
         <div class="pokedex-info-wrapper">
-            <div class="pokedex-info-front">
-                <span>patata</span>
+            <div class="pokedex-info-front-wrapper">
+                <div class="pokedex-info-top"></div>
+                <div class="pokedex-info">
+                    <span>patata</span>
+                </div>
             </div>
             <div class="pokedex-info-back">
                 <span>Abrir</span>
