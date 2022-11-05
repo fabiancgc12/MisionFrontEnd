@@ -8,7 +8,7 @@
     --progressColor:#003a70;
     --mainColor: #bf0009;
     --secundaryColor:#a50103;
-    --black:#252525;
+    --background:#252525;
     --white:#E1D9D1;
     --normalColor: #A8A77A;
     --fireColor: #EE8130;
@@ -49,6 +49,12 @@ img{
     max-width: 350px;
 }
 
+.info-label{
+    color: #0c0c0c;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
 .pokedex-search-wrapper{
     display: flex;
     flex-direction: column;
@@ -80,7 +86,7 @@ img{
     width: 75%;
     aspect-ratio: 1/.75;
     border: 10px solid #ccc;
-    background-color: var(--black);
+    background-color: var(--background);
     border-radius: 10px;
 }
 
@@ -104,7 +110,7 @@ img{
     color: var(--white);
     text-align: center;
     font-weight: bold;
-    background: var(--black);
+    background: var(--background);
     padding: 8px 16px;
     border-radius: 5px;
 }
@@ -123,7 +129,7 @@ img{
     width: 25%;
     cursor: pointer;
     color: var(--white);
-    background: var(--black);
+    background: var(--background);
     border-radius: 5px;
 }
 
@@ -191,7 +197,7 @@ img{
 
 .leftarrow:hover svg,
 .rightarrow:hover svg{
-    fill: var(--black);
+    fill: var(--background);
 }
 
 .leftsprite:hover img,
@@ -264,7 +270,10 @@ img{
 }
 
 .pokedex-info > div{
-    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--background);
     border: 3px solid #ccc;
     border-radius: 10px;
     height: 100%;
@@ -278,7 +287,9 @@ img{
 }
 
 .pokemon-entry{
-    padding: 1em;
+    font-size: .9em;
+    padding: .8em;
+    text-align: justify;
 }
 
 .pokemon-types{
@@ -475,11 +486,11 @@ img{
 }
 
 .pokemon-stats .stat progress[value]::-webkit-progress-bar {
-    background-color: var(--black);
+    background-color: var(--background);
 }
 
 .pokemon-stats .stat progress::-moz-progress-bar {
-    background: var(--black);
+    background: var(--background);
 }
 
 progress[value]::-webkit-progress-value{
@@ -489,6 +500,14 @@ progress[value]::-webkit-progress-value{
     appearance: none;
     background: var(--progressColor);
     background-position: -100px 100px;
+}
+
+.general-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokedex-info-back{
