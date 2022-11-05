@@ -267,6 +267,8 @@ img{
     background-color: var(--mainColor);
     padding: 10px;
     color: var(--white);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .pokedex-info > div{
@@ -277,7 +279,6 @@ img{
     border: 3px solid #ccc;
     border-radius: 10px;
     height: 100%;
-    max-height: calc(100% - 25px);
     padding: .25em 1em;
     overflow-y: scroll;
     overflow-x: hidden;
