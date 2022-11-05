@@ -135,7 +135,7 @@ img{
                         ". . bottom . .";
     grid-template-rows: repeat(3,35px);
     grid-template-columns: repeat(5,35px);
-    --pokemonAnimation: up-and-down .3s infinite alternate;
+    --pokemonAnimation: up-and-down .2s infinite alternate;
 
 }
 
@@ -284,6 +284,6 @@ img{
 }
 
 @keyframes up-and-down {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
 }
