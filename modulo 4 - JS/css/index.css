@@ -42,7 +42,7 @@ img{
     height: 100vh;
     min-height: 500px;
     max-height: 700px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .pokedex > * {
@@ -277,7 +277,10 @@ img{
     border: 3px solid #ccc;
     border-radius: 10px;
     height: 100%;
+    max-height: calc(100% - 25px);
     padding: .25em 1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .pokemon-name{
@@ -510,10 +513,16 @@ progress[value]::-webkit-progress-value{
     align-items: center;
 }
 
-.pokemon-moves{
+.pokemon-moves h2{
+    text-align: center;
+}
+
+.move-list{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .pokedex-info-back{
