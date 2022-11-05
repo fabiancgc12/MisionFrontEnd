@@ -68,7 +68,8 @@ img{
     display: grid;
     place-items: center;
     flex-basis: 10%;
-    background-color: #bf2727;
+    background-color: var(--mainColor);
+    padding: 5px;
 }
 
 .search-box form{
@@ -112,7 +113,98 @@ img{
 
 .controls{
     flex-basis: 40%;
+    display: grid;
+    grid-template-areas: "direction buttons";
+    grid-template-columns: 1fr 1fr;
     background-color: #7e1818;
+}
+
+.control-buttons{
+    grid-area: buttons;
+    padding: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.control-directions{
+    grid-area: direction;
+    display: grid;
+    place-content: center;
+    grid-template-areas: ". . top . ."
+                        "leftIcon left center right rightIcon"
+                        ". . bottom . .";
+    grid-template-rows: repeat(3,35px);
+    grid-template-columns: repeat(5,35px);
+    --pokemonAnimation: up-and-down .3s infinite alternate;
+
+}
+
+.control-directions >*{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-directions > * svg{
+    width: 100%;
+    height: 100%;
+}
+
+.control-directions > * img{
+    object-fit: cover;
+}
+
+/*.control-directions > * img:hover{*/
+/*    animation: var(--pokemonAnimation)*/
+/*}*/
+
+.toparrow{
+    align-self: end;
+    grid-area: top;
+}
+
+.leftsprite{
+    cursor: pointer;
+    grid-area: leftIcon;
+}
+
+.leftarrow{
+    cursor: pointer;
+    grid-area: left;
+}
+
+.leftarrow:hover svg,
+.rightarrow:hover svg{
+    fill: var(--black);
+}
+
+.leftsprite:hover img,
+.leftarrow:hover + .leftsprite img{
+    animation: var(--pokemonAnimation)
+}
+
+.centerarrow{
+    grid-area: center;
+}
+
+.rightarrow{
+    cursor: pointer;
+    grid-area: right;
+}
+
+.rightsprite{
+    cursor: pointer;
+    grid-area: rightIcon;
+}
+
+.rightsprite:hover img,
+.rightarrow:hover + .rightsprite img{
+    animation: var(--pokemonAnimation)
+}
+
+.bottomarrow{
+    align-self: start;
+    grid-area: bottom;
 }
 
 .pokedex-info-wrapper{
@@ -189,4 +281,9 @@ img{
     100% {
         transform: perspective(1000px) rotateY(360deg);
     }
+}
+
+@keyframes up-and-down {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
