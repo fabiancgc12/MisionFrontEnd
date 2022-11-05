@@ -267,7 +267,7 @@ img{
     border: 3px solid #ccc;
     border-radius: 10px;
     height: 100%;
-    padding: .25em;
+    padding: .25em 1em;
 }
 
 .pokemon-name{
@@ -278,6 +278,12 @@ img{
 
 .pokemon-entry{
     padding: 1em;
+}
+
+.pokemon-types{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .type{
