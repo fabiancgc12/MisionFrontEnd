@@ -510,6 +510,12 @@ progress[value]::-webkit-progress-value{
     align-items: center;
 }
 
+.pokemon-moves{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .pokedex-info-back{
     visibility: hidden;
     background-color: #1E3E73;
