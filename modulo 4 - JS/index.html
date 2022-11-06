@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-<div class="pokedex">
+<div class="pokedex" id="pokedex">
     <div class="pokedex-search-wrapper">
         <div class="pokedex-search-top">
             <div class="pokedex-top-nav">
@@ -48,6 +48,9 @@
                         </svg>
                     </button>
                 </form>
+                <div class="more-info">
+                    <button id="more-info" class="more-info-button">More Info</button>
+                </div>
             </div>
             <div class="controls">
                 <div class="control-buttons">
@@ -97,6 +100,12 @@
     <div class="pokedex-info-wrapper">
         <div class="pokedex-info-front-wrapper">
             <div class="pokedex-info-top">
+                <button id="back-button" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-caret-left-square-fill" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm10.5 10V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4A.5.5 0 0 0 10.5 12z"/>
+                    </svg>
+                    Back</button>
                 <svg>
                     <path d="M 0 7
                          H 140
