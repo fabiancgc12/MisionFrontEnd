@@ -106,7 +106,7 @@ img{
 
 .search-input{
     width: 75%;
-    border: 1px solid black;
+    border: 2px solid black;
     color: var(--white);
     text-align: center;
     font-weight: bold;
@@ -249,7 +249,7 @@ img{
     visibility: visible;
     opacity: 1;
     transform-origin: left;
-    /*animation: flip-with-rotate-front 2s ease-in-out;*/
+    animation: flip-with-rotate-front 2s ease-in-out;
 }
 
 .pokedex-info-front-wrapper{
@@ -530,6 +530,7 @@ progress[value]::-webkit-progress-value{
     visibility: hidden;
     background-color: #1E3E73;
     transform-origin: left;
+    animation: flip-with-rotate-back 2s ease-in-out;
 }
 
 @keyframes flip-with-rotate-front {
