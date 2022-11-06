@@ -651,9 +651,8 @@ progress[value]::-webkit-progress-value{
 }
 
 .more-info{
-    /*display: none;*/
+    display: none;
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     /*position: absolute;*/
@@ -671,7 +670,7 @@ progress[value]::-webkit-progress-value{
 }
 
 .back-button{
-    display: flex;
+    display: none;
     gap: 5px;
     position: absolute;
     top: 55%;
@@ -755,5 +754,10 @@ progress[value]::-webkit-progress-value{
 
     .pokemon-stats progress{
         display: none;
+    }
+
+    .more-info,
+    .back-button{
+        display: flex;
     }
 }
