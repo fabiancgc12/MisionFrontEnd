@@ -732,11 +732,51 @@ progress[value]::-webkit-progress-value{
     MEDIA QUERIES
  */
 
-@media only screen and (max-width: 300px){
+
+@media only screen and (max-width: 500px){
+    .pokedex{
+        --pokedexWidth: 100vw;
+    }
+
+    .controls{
+        font-size: 20px;
+    }
+
+    .control-buttons img{
+        min-width: 140px;
+    }
+
+    .display-pokemon > div {
+        /*aspect-ratio: 1 / 0.75*/
+    }
+
+    .pokemon-stats .stat{
+        grid-template-columns: 5em 1fr 5em;
+    }
+
+    .more-info,
+    .back-button{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
     .controls{
         /*font-size: 22px;*/
+        font-size: 17px;
+    }
+
+    .control-buttons img{
+        min-width: 110px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+
+    .controls{
         grid-template-columns: 1fr;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .control-buttons{
@@ -753,10 +793,5 @@ progress[value]::-webkit-progress-value{
 
     .pokemon-stats progress{
         display: none;
-    }
-
-    .more-info,
-    .back-button{
-        display: flex;
     }
 }
