@@ -30,7 +30,7 @@ body{
     --darkGray:#6C7A93;
     --lightGray:rgba(235,242,252,1);
     --yellow:#ffd012;
-    --shadowColor:#edf1fe;
+    --shadow: #edf1fe;
     --backgroundImages:linear-gradient(90deg, rgba(14,145,228,1) 0%, rgba(49,104,221,1) 100%);
 
     font-family: crossed,sans-serif;
@@ -279,7 +279,7 @@ img.moderna{
 
 .section3 .benefits > div:hover{
     border-color: white;
-    box-shadow: -3px 44px 47px -11px var(--shadowColor);
+    box-shadow: -3px 44px 47px -11px var(--shadow);
 }
 
 .section3 .benefits > div .benefits-shadow {
@@ -293,7 +293,7 @@ img.moderna{
 }
 
 .section3 .benefits > div:hover .benefits-shadow{
-    box-shadow: 25px 27px 28px 10px var(--shadowColor);
+    box-shadow: 25px 27px 28px 10px var(--shadow);
 }
 
 .section3 .benefits > div .badge{
@@ -301,9 +301,9 @@ img.moderna{
 }
 
 .section3 .benefits > div:hover .badge{
-    box-shadow: 0px 17px 34px 13px var(--shadowColor);
-    -webkit-box-shadow: 0px 17px 34px 13px var(--shadowColor);
-    -moz-box-shadow: 00px 17px 34px 13px var(--shadowColor);
+    box-shadow: 0px 17px 34px 13px var(--shadow);
+    -webkit-box-shadow: 0px 17px 34px 13px var(--shadow);
+    -moz-box-shadow: 00px 17px 34px 13px var(--shadow);
 }
 
 .section4{
@@ -357,7 +357,7 @@ img.moderna{
 
 .section4-preparations details[open] summary > *:first-child,
 .section4-preparations details[open] summary > *:last-child{
-    box-shadow: 0px 8px 11px 1px var(--shadowColor);
+    box-shadow: 0px 8px 11px 1px var(--shadow);
 }
 
 .section4-preparations details[open] summary > *:last-child svg {
@@ -403,7 +403,7 @@ img.moderna{
 }
 
 .section5-contacts .contact:hover{
-    box-shadow: 0px 33px 43px 6px var(--shadowColor);
+    box-shadow: 0px 33px 43px 6px var(--shadow);
 }
 
 .section5-contacts .contact-info .badge{
@@ -412,7 +412,7 @@ img.moderna{
 
 .section5-contacts .contact-info:hover .badge{
     grid-area: badge;
-    box-shadow: 0px 24px 20px 11px var(--shadowColor)
+    box-shadow: 0px 24px 20px 11px var(--shadow)
 }
 
 .section5-contacts .contact-info .contact-type{
@@ -431,7 +431,7 @@ img.moderna{
 .section5-contacts .contact:hover button{
     background-color: var(--mainBlue);
     color: white;
-    box-shadow: 0px 20px 12px -11px var(--shadowColor)
+    box-shadow: 0px 20px 12px -11px var(--shadow)
 }
 .section1 .bg,
 .section4 .bg,
@@ -673,7 +673,7 @@ button:hover {
     }
 
     .section3 .benefits > div:hover .benefits-shadow {
-        box-shadow: 25px 32px 24px 19px var(--shadowColor);
+        box-shadow: 25px 32px 24px 19px var(--shadow);
     }
 
     .section4 {
@@ -736,7 +736,7 @@ button:hover {
     }
 
     .section5-contacts .contact:hover {
-        box-shadow: 0px 0px 25px 6px var(--shadowColor);
+        box-shadow: 0px 0px 25px 6px var(--shadow);
     }
 
     .footer-info > div {
