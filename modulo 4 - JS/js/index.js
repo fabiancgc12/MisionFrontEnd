@@ -19,6 +19,7 @@ const pokemonEntry = document.querySelector("#pokemon-entry")
 const pokemonHeight = document.querySelector("#height")
 const pokemonWeight = document.querySelector("#weight")
 const pokemonAbilities = document.querySelector("#abilities")
+const pokemonTypes = document.querySelector("#types")
 
 /*
     functions
@@ -62,7 +63,11 @@ function showPokemon(pokemon,species) {
     pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text;
     pokemonHeight.innerHTML = formatPokemonHeight(pokemon.height);
     pokemonWeight.innerHTML = formatPokemonWeight(pokemon.weight);
-    pokemonAbilities.innerHTML = getPokemonAbilities(pokemon)
+    pokemonAbilities.innerHTML = getPokemonAbilities(pokemon);
+    pokemonTypes.innerHTML = ""
+    getPokemonTypes(pokemon).forEach(type => {
+        pokemonTypes.appendChild(type)
+    })
 }
 
 function formatPokemonHeight(height){
@@ -79,4 +84,15 @@ function getPokemonAbilities(pokemon){
     }).join(", ")
     console.log(abilities)
     return abilities
+}
+
+function getPokemonTypes(pokemon){
+    const types = pokemon.types.map(t => {
+        const name = t.type.name;
+        const span = document.createElement("span")
+        span.className = `type ${name}Type`
+        return span
+    })
+    console.log(types)
+    return types
 }
