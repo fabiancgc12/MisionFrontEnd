@@ -21,6 +21,34 @@ const pokemonWeight = document.querySelector("#weight")
 const pokemonAbilities = document.querySelector("#abilities")
 const pokemonTypes = document.querySelector("#types")
 
+// stats
+const pokemonStats = {
+    hp:{
+        progress: document.querySelector("#hp-progress"),
+        info: document.querySelector("#hp-info")
+    },
+    attack:{
+        progress: document.querySelector("#attack-progress"),
+        info: document.querySelector("#attack-info")
+    },
+    defense:{
+        progress: document.querySelector("#defense-progress"),
+        info: document.querySelector("#defense-info")
+    },
+    ["special-attack"]:{
+        progress: document.querySelector("#sp-attack-progress"),
+        info: document.querySelector("#sp-attack-info")
+    },
+    ["defense-attack"]:{
+        progress: document.querySelector("#sp-defense-progress"),
+        info: document.querySelector("#sp-defense-info")
+    },
+    speed:{
+        progress: document.querySelector("#speed-progress"),
+        info: document.querySelector("#speed-info")
+    }
+}
+
 /*
     functions
  */
@@ -68,6 +96,14 @@ function showPokemon(pokemon,species) {
     getPokemonTypes(pokemon).forEach(type => {
         pokemonTypes.appendChild(type)
     })
+    getPokemonStats(pokemon).forEach((value,key) => {
+        const statHtml = pokemonStats[key]
+        if (statHtml){
+            console.log({value,key})
+            statHtml.progress.value = value
+            statHtml.info.innerHTML = value
+        }
+    })
 }
 
 function formatPokemonHeight(height){
@@ -82,7 +118,6 @@ function getPokemonAbilities(pokemon){
     const abilities = pokemon.abilities.map(a => {
         return a.ability.name
     }).join(", ")
-    console.log(abilities)
     return abilities
 }
 
@@ -93,6 +128,14 @@ function getPokemonTypes(pokemon){
         span.className = `type ${name}Type`
         return span
     })
-    console.log(types)
     return types
+}
+
+function getPokemonStats(pokemon){
+    const stats = new Map([])
+    pokemon.stats.forEach(s => {
+        stats.set(s.stat.name,s.base_stat)
+    })
+    console.log(stats)
+    return stats
 }
