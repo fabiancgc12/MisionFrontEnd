@@ -89,8 +89,9 @@ leftArrowControl.addEventListener("click", () => {
 })
 
 async function searchPokemonByName(pokemonName){
-    const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
     try {
+        const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
+        moreInfoButton.removeAttribute("disabled")
         errorMessage.classList.remove("show")
         showPokemon(pokemon,species)
     } catch (e) {
@@ -99,6 +100,7 @@ async function searchPokemonByName(pokemonName){
 }
 
 function displayError(){
+    moreInfoButton.setAttribute("disabled",true)
     pokemonImg.removeAttribute("src")
     errorMessage.classList.add("show")
 }

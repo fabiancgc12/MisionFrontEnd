@@ -727,6 +727,10 @@ progress[value]::-webkit-progress-value{
     border: 2px solid black;
 }
 
+.more-info-button:disabled{
+    background-color: darkgray;
+}
+
 .back-button{
     display: none;
     gap: 5px;
@@ -854,7 +858,7 @@ progress[value]::-webkit-progress-value{
     }
 
     .missigno{
-        visibility: visible;
+        display: inline-block;
         width: 20%;
     }
 }
@@ -902,6 +906,6 @@ progress[value]::-webkit-progress-value{
     }
 
     .missigno{
-        visibility: hidden;
+        display: none;
     }
 }
