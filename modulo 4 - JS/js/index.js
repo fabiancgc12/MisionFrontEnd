@@ -122,7 +122,7 @@ function formatPokemonWeight(weight){
 
 function formatPokemonDescription(species){
     const text = species.flavor_text_entries[0].flavor_text
-    const formated = text.replace(/[^\w /\n.-]/g, '');
+    const formated = text.replace(/[^\w\dé /\n.-]/g, '');
     return formated;
 }
 
