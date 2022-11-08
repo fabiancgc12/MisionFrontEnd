@@ -20,6 +20,7 @@ const pokemonHeight = document.querySelector("#height")
 const pokemonWeight = document.querySelector("#weight")
 const pokemonAbilities = document.querySelector("#abilities")
 const pokemonTypes = document.querySelector("#types")
+const pokemonMoves = document.querySelector("#move-list")
 
 // stats
 const pokemonStats = {
@@ -104,6 +105,10 @@ function showPokemon(pokemon,species) {
             statHtml.info.innerHTML = value
         }
     })
+    pokemonMoves.innerHTML = "";
+    getPokemonMoves(pokemon).forEach(move => {
+        pokemonMoves.appendChild(move)
+    })
 }
 
 function formatPokemonHeight(height){
@@ -138,4 +143,15 @@ function getPokemonStats(pokemon){
     })
     console.log(stats)
     return stats
+}
+
+function getPokemonMoves(pokemon){
+    const names = pokemon.moves.map(m => {
+        const name = m.move.name
+        const div = document.createElement("div")
+        div.classList = "move"
+        div.innerHTML = name;
+        return div
+    })
+    return names
 }
