@@ -844,6 +844,6 @@ progress[value]::-webkit-progress-value{
     }
 
     .display-pokemon > div {
-        aspect-ratio: 1 / 1.25
+        aspect-ratio: 1 / .75
     }
 }
