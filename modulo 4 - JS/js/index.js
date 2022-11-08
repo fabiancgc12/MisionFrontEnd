@@ -66,10 +66,7 @@ moreInfoButton.addEventListener("click", () => {
 })
 
 backButton.addEventListener("click", () => {
-    console.log(pokedexElement.classList)
     pokedexElement.classList.remove("open")
-    console.log(pokedexElement.classList)
-
 })
 
 searchButton.addEventListener("click", (e) => {
@@ -97,8 +94,6 @@ async function searchPokemonByName(pokemonName){
 }
 
 function showPokemon(pokemon,species) {
-    console.log(pokemon)
-    console.log(species)
     const sprite = pokemon.sprites.other["official-artwork"].front_default
 
     pokemonImg.src = sprite;
@@ -115,7 +110,6 @@ function showPokemon(pokemon,species) {
     getPokemonStats(pokemon).forEach((value,key) => {
         const statHtml = pokemonStats[key]
         if (statHtml){
-            console.log({value,key})
             statHtml.progress.value = value
             statHtml.info.innerHTML = value
         }
@@ -179,7 +173,6 @@ function getPokemonStats(pokemon){
     pokemon.stats.forEach(s => {
         stats.set(s.stat.name,s.base_stat)
     })
-    console.log(stats)
     return stats
 }
 
