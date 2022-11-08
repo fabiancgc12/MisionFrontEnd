@@ -1,5 +1,5 @@
 const pokedexElement = document.querySelector("#pokedex")
-
+const lastPokemonId = 902;
 /*
     Inputs
  */
@@ -21,6 +21,8 @@ const pokemonWeight = document.querySelector("#weight")
 const pokemonAbilities = document.querySelector("#abilities")
 const pokemonTypes = document.querySelector("#types")
 const pokemonMoves = document.querySelector("#move-list")
+const pokedexLeftArrowSprite = document.querySelector("#left-sprite")
+const pokedexRightArrowSprite = document.querySelector("#right-sprite")
 
 // stats
 const pokemonStats = {
@@ -110,6 +112,23 @@ function showPokemon(pokemon,species) {
     getPokemonMoves(pokemon).forEach(move => {
         pokemonMoves.appendChild(move)
     })
+
+    const pokemonId = pokemon.id
+    if (pokemonId > 1){
+        const prevPokemonId = pokemonId - 1
+        pokedexLeftArrowSprite.setAttribute("src",generateMiniSpriteLink(prevPokemonId))
+    } else {
+        pokedexLeftArrowSprite.setAttribute("src","")
+    }
+
+    //last pokemon knowId
+    if (pokemonId <= lastPokemonId){
+        const nextPokemonId = pokemonId + 1
+        pokedexRightArrowSprite.setAttribute("src",generateMiniSpriteLink(nextPokemonId))
+    } else {
+        pokedexRightArrowSprite.setAttribute("src","")
+    }
+
 }
 
 function formatPokemonHeight(height){
@@ -161,4 +180,12 @@ function getPokemonMoves(pokemon){
         return div
     })
     return names
+}
+
+function generateMiniSpriteLink(id){
+    let url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${id}.png`;
+    //cheking if id is fom gen 8, a lot of the mini sprite look better in gen 7
+    if (id >= 810)
+        url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${id}.png`;
+    return url
 }

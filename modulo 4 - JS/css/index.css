@@ -238,6 +238,10 @@ img{
     object-fit: cover;
 }
 
+.control-directions > * img:not([src]){
+    visibility: hidden;
+}
+
 .toparrow{
     align-self: end;
     grid-area: top;
