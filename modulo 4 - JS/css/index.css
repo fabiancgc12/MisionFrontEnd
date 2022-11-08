@@ -730,6 +730,9 @@ progress[value]::-webkit-progress-value{
 
 
 @media only screen and (max-width: 500px){
+
+    html, body {margin: 0; height: 100%; overflow: hidden}
+
     .pokedex{
         --pokedexWidth: 100vw;
     }
@@ -743,7 +746,7 @@ progress[value]::-webkit-progress-value{
     }
 
     .display-pokemon > div {
-        /*aspect-ratio: 1 / 0.75*/
+        aspect-ratio: 1 / 0.75
     }
 
     .pokemon-stats .stat{
@@ -760,7 +763,16 @@ progress[value]::-webkit-progress-value{
     }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
+
+    .display-pokemon{
+        max-height: fit-content;
+    }
+
+    .display-pokemon > div {
+        aspect-ratio: 1 / 1.25;
+        max-height: fit-content;
+    }
 
     .controls{
         /*font-size: 22px;*/
