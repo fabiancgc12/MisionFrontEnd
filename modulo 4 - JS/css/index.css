@@ -130,6 +130,7 @@ img{
 }
 
 .display-pokemon > div {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,6 +139,46 @@ img{
     border: 10px solid #ccc;
     background-color: var(--background);
     border-radius: 10px;
+}
+
+.display-pokemon > div img:not([src]){
+    visibility: hidden;
+}
+
+.errorMessage{
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    /*aspect-ratio: unset;*/
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+.show{
+    visibility: visible;
+}
+
+.errorMessage > * {
+    flex: 0 1 100%;
+}
+
+.errorMessage h2{
+    font-size: 40px;
+}
+
+.errorMessage p {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.missigno {
+    width: 20%;
 }
 
 .search-box{
@@ -761,7 +802,9 @@ progress[value]::-webkit-progress-value{
         --pokedexWidth: 1fr;
         font-size: 18px;
     }
-
+    .missigno{
+        width: 12%;
+    }
     .pokemon-stats .stat{
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -770,6 +813,10 @@ progress[value]::-webkit-progress-value{
 @media only screen and (max-width: 700px){
     .control-buttons{
         padding: 10px;
+    }
+
+    .missigno{
+        visibility: hidden;
     }
 }
 
@@ -804,6 +851,11 @@ progress[value]::-webkit-progress-value{
     .more-info,
     .back-button{
         display: flex;
+    }
+
+    .missigno{
+        visibility: visible;
+        width: 20%;
     }
 }
 
@@ -847,5 +899,9 @@ progress[value]::-webkit-progress-value{
 
     .display-pokemon > div {
         aspect-ratio: 1 / .75
+    }
+
+    .missigno{
+        visibility: hidden;
     }
 }

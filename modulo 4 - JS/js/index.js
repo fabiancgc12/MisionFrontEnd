@@ -1,4 +1,5 @@
 const pokedexElement = document.querySelector("#pokedex")
+const errorMessage = document.querySelector(".errorMessage")
 const lastPokemonId = 902;
 let pokemonId = null
 /*
@@ -89,10 +90,17 @@ leftArrowControl.addEventListener("click", () => {
 
 async function searchPokemonByName(pokemonName){
     const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
-    if (pokemon)
+    try {
+        errorMessage.classList.remove("show")
         showPokemon(pokemon,species)
-    else
-        alert("error")
+    } catch (e) {
+        displayError()
+    }
+}
+
+function displayError(){
+    pokemonImg.removeAttribute("src")
+    errorMessage.classList.add("show")
 }
 
 function showPokemon(pokemon,species) {
