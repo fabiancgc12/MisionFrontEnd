@@ -1,8 +1,25 @@
 const pokedexElement = document.querySelector("#pokedex")
+
+/*
+    Inputs
+ */
+
 const moreInfoButton = document.querySelector("#more-info")
 const backButton = document.querySelector("#back-button")
 const searchButton = document.querySelector("#submit-button")
 const searchInput = document.querySelector("#searchInput")
+
+/*
+    Pokemon Data
+ */
+
+const pokemonImg = document.querySelector("#pokemon-img")
+const pokemonName = document.querySelector("#pokemon-name")
+const pokemonEntry = document.querySelector("#pokemon-entry")
+
+/*
+    functions
+ */
 
 const pokedex = new Pokedex.Pokedex()
 
@@ -25,6 +42,19 @@ searchButton.addEventListener("click", (e) => {
 })
 
 async function searchPokemonByName(pokemonName){
-    const pokemon = await pokedex.getPokemonByName(pokemonName)
+    const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
+    if (pokemon)
+        showPokemon(pokemon,species)
+    else
+        alert("error")
+}
+
+function showPokemon(pokemon,species) {
     console.log(pokemon)
+    console.log(species)
+    const sprite = pokemon.sprites.other["official-artwork"].front_default
+
+    pokemonImg.src = sprite;
+    pokemonName.innerHTML = pokemon.name
+    pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text
 }
