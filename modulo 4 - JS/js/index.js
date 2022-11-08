@@ -1,5 +1,6 @@
 const pokedexElement = document.querySelector("#pokedex")
 const errorMessage = document.querySelector(".errorMessage")
+const pokedexInfoSection = document.querySelector(".pokedex-info")
 const lastPokemonId = 902;
 let pokemonId = null
 /*
@@ -91,8 +92,6 @@ leftArrowControl.addEventListener("click", () => {
 async function searchPokemonByName(pokemonName){
     try {
         const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
-        moreInfoButton.removeAttribute("disabled")
-        errorMessage.classList.remove("show")
         showPokemon(pokemon,species)
     } catch (e) {
         displayError()
@@ -100,6 +99,10 @@ async function searchPokemonByName(pokemonName){
 }
 
 function displayError(){
+    pokemonId = null
+    pokedexLeftArrowSprite.removeAttribute("src")
+    pokedexRightArrowSprite.removeAttribute("src")
+    pokedexInfoSection.classList.add("loading")
     moreInfoButton.setAttribute("disabled",true)
     pokemonImg.removeAttribute("src")
     errorMessage.classList.add("show")
@@ -147,6 +150,9 @@ function showPokemon(pokemon,species) {
         pokedexRightArrowSprite.setAttribute("src","")
     }
 
+    moreInfoButton.removeAttribute("disabled")
+    errorMessage.classList.remove("show")
+    pokedexInfoSection.classList.remove("loading")
 }
 
 function formatPokemonHeight(height){
