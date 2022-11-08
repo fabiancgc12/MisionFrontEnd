@@ -44,7 +44,9 @@ img{
 .pokedex{
     --pokedexWidth:400px;
     display: grid;
-    grid-template-columns: repeat(2,min(var(--pokedexWidth),100%));
+    /*grid-template-columns: repeat(2,min(var(--pokedexWidth),100%));*/
+    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: repeat(2,var(--pokedexWidth));
     height: 100vh;
     min-height: 500px;
     /*max-height: 700px;*/
@@ -198,7 +200,7 @@ img{
 }
 
 .control-buttons img{
-    min-width: 150px;
+    /*min-width: 150px;*/
 }
 
 .control-directions{
@@ -553,7 +555,7 @@ img{
 
 .pokemon-stats .stat{
     display: grid;
-    grid-template-columns: 5em 1fr 3em;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
     align-items: center;
 }
@@ -734,22 +736,38 @@ progress[value]::-webkit-progress-value{
  */
 
 
-@media only screen and (min-width: 501px){
+@media only screen and (min-width: 601px){
     .pokedex{
         place-content: center;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 800px){
+    .pokedex{
+        --pokedexWidth: 1fr;
+    }
+}
 
-    html, body {margin: 0; height: 100%; overflow: hidden}
+@media only screen and (max-width: 700px){
+    .control-buttons{
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    html, body {margin: 0; height: 100%; overflow-x: hidden}
 
     .pokedex{
         --pokedexWidth: 100vw;
     }
 
     .controls{
-        font-size: 20px;
+        font-size: 27px;
+    }
+
+    .control-buttons{
+        padding: 25px;
     }
 
     .control-buttons img{
@@ -765,7 +783,7 @@ progress[value]::-webkit-progress-value{
     }
 
     .pokedex.open{
-        transform: translateX(-100%);
+        transform: translateX(-100vw);
     }
 
     .more-info,
@@ -774,20 +792,19 @@ progress[value]::-webkit-progress-value{
     }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 500px){
 
     .display-pokemon{
-        max-height: fit-content;
+        /*max-height: fit-content;*/
     }
 
     .display-pokemon > div {
-        aspect-ratio: 1 / 1.25;
-        max-height: fit-content;
+        aspect-ratio: 1 / .75;
     }
 
     .controls{
-        /*font-size: 22px;*/
-        font-size: 17px;
+        font-size: 22px;
+        /*font-size: 17px;*/
     }
 
     .control-buttons img{
@@ -795,11 +812,18 @@ progress[value]::-webkit-progress-value{
     }
 }
 
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 450px){
+    .display-pokemon > div {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media only screen and (max-width: 400px){
 
     .controls{
+        padding: 10px;
         grid-template-columns: 1fr;
-        font-size: 22px;
+        font-size: 25px;
     }
 
     .control-buttons{
@@ -807,7 +831,7 @@ progress[value]::-webkit-progress-value{
     }
 
     .display-pokemon > div {
-        aspect-ratio: 1 / 1.5
+        aspect-ratio: 1 / 1.25
     }
 
     .pokemon-stats .stat{
