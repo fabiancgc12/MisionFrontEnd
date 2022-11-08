@@ -5,6 +5,8 @@ let pokemonId = null
     Inputs
  */
 
+
+const searchForm = document.querySelector("#searchForm")
 const moreInfoButton = document.querySelector("#more-info")
 const backButton = document.querySelector("#back-button")
 const searchButton = document.querySelector("#submit-button")
@@ -69,7 +71,7 @@ backButton.addEventListener("click", () => {
     pokedexElement.classList.remove("open")
 })
 
-searchButton.addEventListener("click", (e) => {
+searchForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const value = searchInput.value;
     searchPokemonByName(value)
