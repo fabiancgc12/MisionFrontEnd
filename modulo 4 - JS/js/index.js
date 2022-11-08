@@ -16,6 +16,9 @@ const searchInput = document.querySelector("#searchInput")
 const pokemonImg = document.querySelector("#pokemon-img")
 const pokemonName = document.querySelector("#pokemon-name")
 const pokemonEntry = document.querySelector("#pokemon-entry")
+const pokemonHeight = document.querySelector("#height")
+const pokemonWeight = document.querySelector("#weight")
+const pokemonAbilities = document.querySelector("#abilities")
 
 /*
     functions
@@ -56,5 +59,24 @@ function showPokemon(pokemon,species) {
 
     pokemonImg.src = sprite;
     pokemonName.innerHTML = pokemon.name
-    pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text
+    pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text;
+    pokemonHeight.innerHTML = formatPokemonHeight(pokemon.height);
+    pokemonWeight.innerHTML = formatPokemonWeight(pokemon.weight);
+    pokemonAbilities.innerHTML = getPokemonAbilities(pokemon)
+}
+
+function formatPokemonHeight(height){
+    return height / 10
+}
+
+function formatPokemonWeight(weight){
+    return weight / 10
+}
+
+function getPokemonAbilities(pokemon){
+    const abilities = pokemon.abilities.map(a => {
+        return a.ability.name
+    }).join(", ")
+    console.log(abilities)
+    return abilities
 }
