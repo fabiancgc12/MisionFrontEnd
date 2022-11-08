@@ -352,7 +352,7 @@ img{
     padding: 10px;
     color: var(--white);
     border-radius: 0 0 10px 0;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     overflow-y: auto;
     z-index: 2;
 }
@@ -366,8 +366,8 @@ img{
     border-radius: 10px;
     height: 100%;
     padding: .25em 1em;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-y: auto;
+    /*overflow-x: hidden;*/
 }
 
 .pokemon-name{
