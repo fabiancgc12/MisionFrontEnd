@@ -39,7 +39,7 @@ const pokemonStats = {
         progress: document.querySelector("#sp-attack-progress"),
         info: document.querySelector("#sp-attack-info")
     },
-    ["defense-attack"]:{
+    ["special-defense"]:{
         progress: document.querySelector("#sp-defense-progress"),
         info: document.querySelector("#sp-defense-info")
     },
