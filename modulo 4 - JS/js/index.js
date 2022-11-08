@@ -89,7 +89,8 @@ function showPokemon(pokemon,species) {
 
     pokemonImg.src = sprite;
     pokemonName.innerHTML = pokemon.name
-    pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text;
+    // pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text;
+    pokemonEntry.innerHTML = formatPokemonDescription(species);
     pokemonHeight.innerHTML = formatPokemonHeight(pokemon.height);
     pokemonWeight.innerHTML = formatPokemonWeight(pokemon.weight);
     pokemonAbilities.innerHTML = getPokemonAbilities(pokemon);
@@ -117,6 +118,12 @@ function formatPokemonHeight(height){
 
 function formatPokemonWeight(weight){
     return weight / 10
+}
+
+function formatPokemonDescription(species){
+    const text = species.flavor_text_entries[0].flavor_text
+    const formated = text.replace(/[^\w /\n.-]/g, '');
+    return formated;
 }
 
 function getPokemonAbilities(pokemon){
