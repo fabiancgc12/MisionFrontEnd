@@ -1,5 +1,6 @@
 const pokedexElement = document.querySelector("#pokedex")
 const lastPokemonId = 902;
+let pokemonId = null
 /*
     Inputs
  */
@@ -8,6 +9,8 @@ const moreInfoButton = document.querySelector("#more-info")
 const backButton = document.querySelector("#back-button")
 const searchButton = document.querySelector("#submit-button")
 const searchInput = document.querySelector("#searchInput")
+const leftArrowControl = document.querySelector("#left-arrow")
+const rightArrowControl = document.querySelector("#right-arrow")
 
 /*
     Pokemon Data
@@ -72,8 +75,17 @@ backButton.addEventListener("click", () => {
 searchButton.addEventListener("click", (e) => {
     e.preventDefault()
     const value = searchInput.value;
-    console.log({value})
     searchPokemonByName(value)
+})
+
+rightArrowControl.addEventListener("click", () => {
+    if (!pokemonId) return
+    searchPokemonByName(pokemonId + 1)
+})
+
+leftArrowControl.addEventListener("click", () => {
+    if (!pokemonId) return
+    searchPokemonByName(pokemonId - 1)
 })
 
 async function searchPokemonByName(pokemonName){
@@ -113,7 +125,7 @@ function showPokemon(pokemon,species) {
         pokemonMoves.appendChild(move)
     })
 
-    const pokemonId = pokemon.id
+    pokemonId = pokemon.id
     if (pokemonId > 1){
         const prevPokemonId = pokemonId - 1
         pokedexLeftArrowSprite.setAttribute("src",generateMiniSpriteLink(prevPokemonId))
