@@ -564,8 +564,7 @@ img{
 
 .pokemon-stats .stat{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+    grid-template-columns: 1.5fr 1fr 1fr;
     align-items: center;
 }
 
@@ -755,6 +754,10 @@ progress[value]::-webkit-progress-value{
     .pokedex{
         --pokedexWidth: 1fr;
         font-size: 18px;
+    }
+
+    .pokemon-stats .stat{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
