@@ -785,10 +785,6 @@ progress[value]::-webkit-progress-value{
         aspect-ratio: 1 / 0.75
     }
 
-    .pokemon-stats .stat{
-        grid-template-columns: 5em 1fr 5em;
-    }
-
     .pokedex.open{
         transform: translateX(-100vw);
     }
@@ -839,13 +835,5 @@ progress[value]::-webkit-progress-value{
 
     .display-pokemon > div {
         aspect-ratio: 1 / 1.25
-    }
-
-    .pokemon-stats .stat{
-        grid-template-columns: 5em 1fr;
-    }
-
-    .pokemon-stats progress{
-        display: none;
     }
 }
