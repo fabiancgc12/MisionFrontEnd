@@ -93,6 +93,7 @@ leftArrowControl.addEventListener("click", () => {
 
 async function searchPokemonByName(pokemonName){
     try {
+        pokemonImg.src = "./src/loading.gif";
         const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
         showPokemon(pokemon,species)
     } catch (e) {
