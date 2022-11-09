@@ -248,7 +248,7 @@ img{
 }
 
 .missigno {
-    width: 20%;
+    width: 15%;
 }
 
 .search-box{
@@ -915,7 +915,8 @@ progress[value]::-webkit-progress-value{
     }
 
     .missigno{
-        visibility: hidden;
+        display: none;
+        /*visibility: hidden;*/
     }
 }
 
