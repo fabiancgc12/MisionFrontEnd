@@ -582,6 +582,11 @@ img{
     gap: 5px;
 }
 
+.types-list{
+    display:flex;
+    gap: 5px;
+}
+
 .type{
     position: relative;
     display: inline-block;
