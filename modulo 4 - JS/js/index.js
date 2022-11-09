@@ -77,7 +77,7 @@ backButton.addEventListener("click", () => {
 
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    const value = searchInput.value;
+    const value = searchInput.value.trim();
     searchPokemonByName(value)
 })
 
