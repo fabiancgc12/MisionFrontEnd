@@ -218,8 +218,10 @@ function formatPokemonWeight(weight){
 }
 
 function formatPokemonDescription(species){
-    const text = species.flavor_text_entries[0].flavor_text
-    const formated = text.replace(/[^\w\dé /\n.-]/g, '');
+    //debo encontrar el primer texto que este en ingles
+    let element = species.flavor_text_entries.find(element => element.language.name === "en");
+    //quito caracteres especiales
+    const formated = element.flavor_text.replace(/[^\w\dé /\n.-]/g, '');
     return formated;
 }
 
