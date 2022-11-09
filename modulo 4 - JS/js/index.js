@@ -104,12 +104,14 @@ function clearDisplay(){
     }
     displayPokemonSection.classList.remove("multiple")
     pokemonImg.src = "./src/loading.gif";
+    pokemonImg.onclick = () => {};
 }
 
 async function searchPokemonByName(pokemonName){
     try {
         clearDisplay()
         const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
+        searchInput.value = pokemonName
         showPokemon(pokemon,species)
     } catch (e) {
         displayError()
@@ -125,15 +127,21 @@ async function searchMultiplePokemons(firstId,lastId){
     const imagesUrls = [];
     for (let i = firstId;i <= lastId;i++){
         const imageUrl = generateMiniSpriteLink(i);
-        imagesUrls.push(imageUrl)
+        imagesUrls.push([i,imageUrl])
     };
-    imagesUrls.forEach((url,index) => {
-        if (index == 1){
+    imagesUrls.forEach(([id,url],index) => {
+        if (index == 0){
             pokemonImg.src = url
+            pokemonImg.onclick = () => {
+                searchPokemonByName(id)
+            }
         } else {
             const img = document.createElement("img")
             img.className = "pokemon-image";
             img.src = url;
+            img.onclick = () => {
+                searchPokemonByName(id)
+            }
             displayPokemonInner.appendChild(img)
         }
     })
