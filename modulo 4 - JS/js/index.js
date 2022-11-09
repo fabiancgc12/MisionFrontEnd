@@ -3,10 +3,10 @@ const errorMessage = document.querySelector(".errorMessage")
 const pokedexInfoSection = document.querySelector(".pokedex-info")
 const lastPokemonId = 902;
 let pokemonId = null
+
 /*
     Inputs
  */
-
 
 const searchForm = document.querySelector("#searchForm")
 const moreInfoButton = document.querySelector("#more-info")
@@ -15,7 +15,9 @@ const searchButton = document.querySelector("#submit-button")
 const searchInput = document.querySelector("#searchInput")
 const leftArrowControl = document.querySelector("#left-arrow")
 const rightArrowControl = document.querySelector("#right-arrow")
-
+const bluethemeBottom = document.querySelector(".blue-theme")
+const redthemeBottom = document.querySelector(".red-theme")
+const greenthemeBottom = document.querySelector(".green-theme")
 /*
     Pokemon Data
  */
@@ -212,3 +214,30 @@ function generateMiniSpriteLink(id){
         url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${id}.png`;
     return url
 }
+
+/*
+    changing theme
+ */
+
+bluethemeBottom.addEventListener("click",() => {
+    document.body.className="blue";
+    localStorage.setItem('theme', 'blue');
+})
+
+redthemeBottom.addEventListener("click",() => {
+    document.body.className="red";
+    localStorage.setItem('theme', 'red');
+})
+
+greenthemeBottom.addEventListener("click",() => {
+    document.body.className="green";
+    localStorage.setItem('theme', 'green');
+})
+
+
+function loadTheme(){
+    const theme = localStorage.getItem('theme') ?? "red";
+    document.body.className=theme;
+}
+
+loadTheme()

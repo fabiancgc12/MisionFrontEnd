@@ -5,11 +5,26 @@
     padding: 0;
     box-sizing: border-box;
     --topHeight:50px;
-    --progressColor:#003a70;
-    --mainColor: #bf0009;
-    --secundaryColor:#a50103;
+
+    --progressRed:#003a70;
+    --mainRed:#bf0009;
+    --secundaryRed:#a50103;
+    --darkMainRed: #7e1818;
+
+    --progressBlue:#003a70;
+    --mainBlue:#70a2f7;
+    --secundaryBlue:#4385f5;
+    --darkMainBlue: #3367d7;
+
+    --progressGreen:#d3ffb3;
+    --mainGreen:#389f0a;
+    --secundaryGreen:#266f05;
+    --darkMainGreen: #1f6200;
+
     --background:#252525;
-    --white:#E1D9D1;
+    --lightfont:#E1D9D1;
+    --darkfont:#0c0c0c;
+
     --normalColor: #A8A77A;
     --fireColor: #EE8130;
     --waterColor: #6390F0;
@@ -35,6 +50,24 @@ body{
     place-items: center;
     background: url("../src/background.jpg") no-repeat;
     background-size: cover;
+    --progressColor:var(--progressRed);
+    --mainColor: var(--mainRed);
+    --secundaryColor:var(--secundaryRed);
+    --darkMainColor: var(--darkMainRed);
+}
+
+body.blue{
+    --progressColor:var(--progressBlue);
+    --mainColor: var(--mainBlue);
+    --secundaryColor:var(--secundaryBlue);
+    --darkMainColor: var(--darkMainBlue);
+}
+
+body.green{
+    --progressColor:var(--progressGreen);
+    --mainColor: var(--mainGreen);
+    --secundaryColor:var(--secundaryGreen);
+    --darkMainColor: var(--darkMainGreen);
 }
 
 img{
@@ -62,7 +95,7 @@ img{
 }
 
 .info-label{
-    color: #0c0c0c;
+    color: var(--darkfont);
     text-transform: capitalize;
     font-weight: bold;
 }
@@ -81,14 +114,15 @@ img{
     background-color: var(--mainColor);
     border-radius: 10px 10px 0 0;
     isolation: isolate;
-    z-index: -1;
 }
 
 .pokedex-search-top .pokedex-info-top{
     transform: rotateY(180deg);
+    overflow-y: hidden;
 }
 
 .pokedex-top-nav{
+    position: relative;
     height: var(--topHeight);
 }
 
@@ -98,17 +132,53 @@ img{
 }
 
 .big-blue-button{
+    display: inline-block;
     position: relative;
     width: 60px;
     background-color: #347bbc;
-    border: 3px solid var(--white);
+    border: 3px solid var(--lightfont);
     top: 10px;
     left: 10px;
 }
 
+.theme-selector{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    padding: 2px 5px;
+    gap: 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--lightfont);
+}
+
+.theme-selector > * {
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 100%;
+    padding: .25em;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.red-theme{
+    background-color: var(--darkMainRed);
+    border-color: var(--secundaryRed);
+}
+
+.blue-theme{
+    background-color: var(--darkMainBlue);
+    border-color: var(--secundaryBlue);
+}
+
+.green-theme{
+    background-color: var(--darkMainGreen);
+    border-color: var(--secundaryGreen);
+}
+
 .white-circle{
     position: relative;
-    background-color: var(--white);
+    background-color: var(--lightfont);
     width: 10px;
     opacity: .6;
     top: 15%;
@@ -173,7 +243,7 @@ img{
 }
 
 .errorMessage p {
-    color: var(--white);
+    color: var(--lightfont);
     font-weight: bold;
 }
 
@@ -198,7 +268,7 @@ img{
 .search-input{
     width: 75%;
     border: 2px solid black;
-    color: var(--white);
+    color: var(--lightfont);
     text-align: center;
     font-weight: bold;
     background: var(--background);
@@ -219,7 +289,7 @@ img{
     place-items: center;
     width: 25%;
     cursor: pointer;
-    color: var(--white);
+    color: var(--lightfont);
     background: var(--background);
     border-radius: 5px;
     border: 2px solid black;
@@ -234,7 +304,7 @@ img{
     display: grid;
     grid-template-areas: "direction buttons";
     grid-template-columns: 1fr 1fr;
-    background-color: #7e1818;
+    background-color: var(--darkMainColor);
     border-radius: 0 0 0 10px;
 }
 
@@ -398,7 +468,7 @@ img{
     flex-basis: 100%;
     background-color: var(--mainColor);
     padding: 10px;
-    color: var(--white);
+    color: var(--lightfont);
     border-radius: 0 0 10px 0;
     /*overflow-x: hidden;*/
     overflow-y: auto;
@@ -708,7 +778,7 @@ progress[value]::-webkit-progress-value{
     flex-basis: 100%;
     background-color: var(--mainColor);
     padding: 10px;
-    color: var(--white);
+    color: var(--lightfont);
     transform: rotateY(180deg);
 }
 
@@ -748,7 +818,7 @@ progress[value]::-webkit-progress-value{
     font-weight: bold;
     background-color: var(--progressColor);
     border-radius: 5px;
-    color: var(--white);
+    color: var(--lightfont);
     border: 2px solid black;
 }
 
