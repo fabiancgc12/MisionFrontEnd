@@ -1,6 +1,8 @@
 const pokedexElement = document.querySelector("#pokedex")
 const errorMessage = document.querySelector(".errorMessage")
 const pokedexInfoSection = document.querySelector(".pokedex-info")
+const displayPokemonSection = document.querySelector(".display-pokemon")
+const displayPokemonInner = document.querySelector(".display-pokemon > div")
 const lastPokemonId = 902;
 let pokemonId = null
 
@@ -78,7 +80,12 @@ backButton.addEventListener("click", () => {
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const value = searchInput.value.trim();
-    searchPokemonByName(value)
+    if (value.match(/\d-\d/g)) {
+        const [firstId, lastId] = value.split("-");
+        searchMultiplePokemons(Number(firstId),Number(lastId))
+    }
+    else
+        searchPokemonByName(value)
 })
 
 rightArrowControl.addEventListener("click", () => {
@@ -91,9 +98,17 @@ leftArrowControl.addEventListener("click", () => {
     searchPokemonByName(pokemonId - 1)
 })
 
+function clearDisplay(){
+    while (displayPokemonInner.children.length > 2) {
+        displayPokemonInner.removeChild(displayPokemonInner.lastChild);
+    }
+    displayPokemonSection.classList.remove("multiple")
+    pokemonImg.src = "./src/loading.gif";
+}
+
 async function searchPokemonByName(pokemonName){
     try {
-        pokemonImg.src = "./src/loading.gif";
+        clearDisplay()
         const [pokemon,species] = await Promise.all([pokedex.getPokemonByName(pokemonName),pokedex.getPokemonSpeciesByName(pokemonName)])
         showPokemon(pokemon,species)
     } catch (e) {
@@ -101,8 +116,36 @@ async function searchPokemonByName(pokemonName){
     }
 }
 
+async function searchMultiplePokemons(firstId,lastId){
+    clearDisplay()
+    if (firstId > lastId){
+        displayError();
+        return
+    }
+    const imagesUrls = [];
+    for (let i = firstId;i <= lastId;i++){
+        const imageUrl = generateMiniSpriteLink(i);
+        imagesUrls.push(imageUrl)
+    };
+    imagesUrls.forEach((url,index) => {
+        if (index == 1){
+            pokemonImg.src = url
+        } else {
+            const img = document.createElement("img")
+            img.className = "pokemon-image";
+            img.src = url;
+            displayPokemonInner.appendChild(img)
+        }
+    })
+    displayPokemonSection.classList.add("multiple");
+    errorMessage.classList.remove("show")
+}
+
+
 function displayError(){
+    clearDisplay()
     pokemonId = null
+    displayPokemonSection.classList.remove("multiple")
     pokedexLeftArrowSprite.removeAttribute("src")
     pokedexRightArrowSprite.removeAttribute("src")
     pokedexInfoSection.classList.add("loading")
