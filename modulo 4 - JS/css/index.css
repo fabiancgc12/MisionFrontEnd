@@ -518,6 +518,7 @@ img{
     align-items: center;
     justify-content: center;
     font-size: 30px;
+    animation: animate-waiting 2s ease-in infinite alternate;
 }
 
 .pokedex-info.loading .loading-info svg{
@@ -534,6 +535,15 @@ img{
     position: relative;
     /*right: 0;*/
     animation: animate-loading 3s ease-in infinite;
+}
+
+@keyframes animate-waiting {
+    from{
+        opacity: 0.25;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 @keyframes animate-loading {
