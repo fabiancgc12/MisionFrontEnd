@@ -79,7 +79,7 @@ backButton.addEventListener("click", () => {
 
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    const value = searchInput.value.trim();
+    const value = searchInput.value.trim().toLowerCase();
     if (value.match(/\d-\d/g)) {
         const [firstId, lastId] = value.split("-");
         searchMultiplePokemons(Number(firstId),Number(lastId))
