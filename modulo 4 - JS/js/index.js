@@ -166,7 +166,7 @@ function showPokemon(pokemon,species) {
     const sprite = pokemon.sprites.other["official-artwork"].front_default
 
     pokemonImg.src = sprite;
-    pokemonName.innerHTML = pokemon.name
+    pokemonName.innerHTML = `#${pokemon.id} - ${pokemon.name}`
     // pokemonEntry.innerHTML = species.flavor_text_entries[0].flavor_text;
     pokemonEntry.innerHTML = formatPokemonDescription(species);
     pokemonHeight.innerHTML = formatPokemonHeight(pokemon.height);
