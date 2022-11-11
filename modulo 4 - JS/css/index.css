@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     --topHeight:50px;
+    --moreInfo:#003a70;
 
     --progressRed:#003a70;
     --mainRed:#bf0009;
@@ -888,7 +889,7 @@ progress[value]::-webkit-progress-value{
     width: 60%;
     padding: 8px 16px;
     font-weight: bold;
-    background-color: var(--progressColor);
+    background-color: var(--moreInfo);
     border-radius: 5px;
     color: var(--lightfont);
     border: 2px solid black;
