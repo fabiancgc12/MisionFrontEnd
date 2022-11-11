@@ -437,11 +437,12 @@ img{
 }
 
 .pokedex-info-front-wrapper{
+    --visibilityFront:visible;
     display: block;
-    visibility: visible;
+    visibility: var(--visibilityFront);
     opacity: 1;
     transform-origin: left;
-    animation: flip-with-rotate-front 2s ease-in-out;
+    animation: flip 2s ease-in-out;
     backface-visibility: hidden;
 }
 
@@ -815,11 +816,12 @@ progress[value]::-webkit-progress-value{
 }
 
 .pokedex-info-back-wrapper{
+    --visibilityBack: hidden;
     display: flex;
     flex-direction: column;
-    visibility: hidden;
+    visibility: var(--visibilityBack);
     transform-origin: left;
-    animation: flip-with-rotate-back 2s ease-in-out;
+    animation: flip 2s ease-in-out;
 }
 
 .pokedex-info-back-wrapper .pokedex-info-top svg{
@@ -898,33 +900,19 @@ progress[value]::-webkit-progress-value{
 
 }
 
-@keyframes flip-with-rotate-front {
+@keyframes flip {
     0% {
         transform: perspective(1000px) rotateY(180deg);
-        visibility: hidden
+        --visibilityBack:visible;
+        --visibilityFront:hidden;
     }
-
     50%{
-        visibility: visible;
+        --visibilityFront:visible;
     }
-
-    100% {
-        opacity: 1;
-        transform: perspective(1000px) rotateY(360deg);
-    }
-}
-
-@keyframes flip-with-rotate-back {
-    0% {
-        transform: perspective(1000px) rotateY(180deg);
-        visibility: visible;
-    }
-
-    50%{
-        visibility: hidden;
-    }
-
-    100% {
+    100%{
+        /*por alguna razon debe colocarse en 100 para que se oculte en la mitad,
+        tendra algo que ver con como se anima la propiedad*/
+        --visibilityBack:hidden;
         transform: perspective(1000px) rotateY(360deg);
     }
 }
