@@ -71,6 +71,16 @@ body.green{
     --darkMainColor: var(--darkMainGreen);
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 25px;
+}
+
 img{
     width: 100%;
     height: 100%;
@@ -79,6 +89,7 @@ img{
 
 .pokedex{
     --pokedexWidth:450px;
+    --pokemonAnimation: up-and-down .2s infinite alternate;
     display: grid;
     grid-template-columns: repeat(2,var(--pokedexWidth));
     grid-template-rows: 100vh;
@@ -211,6 +222,7 @@ img{
     border: 10px solid #ccc;
     background-color: var(--background);
     border-radius: 10px;
+    scrollbar-gutter: stable;
 }
 
 .display-pokemon.multiple > div{
@@ -227,6 +239,10 @@ img{
 
 .display-pokemon.multiple > div img{
     cursor: pointer;
+}
+
+.display-pokemon.multiple > div img:hover{
+    animation: var(--pokemonAnimation);
 }
 
 .errorMessage{
@@ -344,7 +360,6 @@ img{
                         ". . bottom . .";
     grid-template-rows: repeat(3,2.25em);
     grid-template-columns: repeat(5,2.25em);
-    --pokemonAnimation: up-and-down .2s infinite alternate;
 
 }
 
