@@ -442,6 +442,7 @@ img{
     opacity: 1;
     transform-origin: left;
     animation: flip-with-rotate-front 2s ease-in-out;
+    backface-visibility: hidden;
 }
 
 .pokedex-info-front-wrapper{
