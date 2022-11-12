@@ -594,6 +594,21 @@ img{
     text-align: justify;
 }
 
+.pokemon-abilities,
+.abilities-list{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.ability{
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    padding: 4px 8px;
+    font-size: .75em;
+    text-transform: capitalize;
+}
+
 .pokemon-types{
     display: flex;
     align-items: center;

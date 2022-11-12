@@ -171,7 +171,10 @@ function showPokemon(pokemon,species) {
     pokemonEntry.innerHTML = formatPokemonDescription(species);
     pokemonHeight.innerHTML = formatPokemonHeight(pokemon.height);
     pokemonWeight.innerHTML = formatPokemonWeight(pokemon.weight);
-    pokemonAbilities.innerHTML = getPokemonAbilities(pokemon);
+    pokemonAbilities.innerHTML = "";
+    getPokemonAbilities(pokemon).forEach(ability => {
+        pokemonAbilities.appendChild(ability)
+    });
     pokemonTypes.innerHTML = ""
     getPokemonTypes(pokemon).forEach(type => {
         pokemonTypes.appendChild(type)
@@ -227,8 +230,11 @@ function formatPokemonDescription(species){
 
 function getPokemonAbilities(pokemon){
     const abilities = pokemon.abilities.map(a => {
-        return a.ability.name
-    }).join(", ")
+        const span = document.createElement("span")
+        span.innerHTML = a.ability.name;
+        span.className = "ability"
+        return span
+    })
     return abilities
 }
 
