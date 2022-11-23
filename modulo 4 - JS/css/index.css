@@ -129,7 +129,7 @@ img{
 
 .pokedex-search-top .pokedex-info-top{
     transform: rotateY(180deg);
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 
 .pokedex-top-nav{
@@ -460,7 +460,7 @@ img{
     visibility: var(--visibilityFront);
     opacity: 1;
     transform-origin: left;
-    animation: flip 2s ease-in-out;
+    animation: flip 3s ease-in-out;
     backface-visibility: hidden;
 }
 
@@ -474,30 +474,35 @@ img{
 }
 
 .pokedex-info-top{
-    flex: 0 0 var(--topHeight);
+    /*flex: 0 0 var(--topHeight);*/
     height: calc(var(--topHeight) - 5px);
 }
 
 .pokedex-info-top > svg{
     width: 100%;
-    fill: var(--mainColor);
 }
 
-.pokedex-info-top > svg > *{
-    stroke: var(--secundaryColor);
-    fill: var(--mainColor);
+.pokedex-info-top .svg-line{
+    fill: var(--secundaryColor);
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,50%));
 }
 
-.pokedex-info-top svg line{
-    stroke-width: 30px;
+.pokedex-info-top .svg-filler{
+    fill: var(--mainColor);
+    stroke: var(--mainColor);
 }
+
+/*.pokedex-info-top > svg > *{*/
+/*    stroke: var(--secundaryColor);*/
+/*    fill: var(--secundaryColor);*/
+/*}*/
 
 .pokedex-info-top svg path{
-    stroke-width: 15px;
+    /*stroke-width: 15px;*/
 }
 
 .pokedex-info{
-    position: relative;
+    /*position: relative;*/
     flex-basis: 100%;
     background-color: var(--mainColor);
     padding: 10px;
@@ -505,7 +510,7 @@ img{
     border-radius: 0 0 10px 0;
     /*overflow-x: hidden;*/
     overflow-y: auto;
-    z-index: 2;
+    /*z-index: 2;*/
 }
 
 .pokedex-info > div{
@@ -866,13 +871,18 @@ progress[value]::-webkit-progress-value{
     flex-direction: column;
     visibility: var(--visibilityBack);
     transform-origin: left;
-    animation: flip 2s ease-in-out;
+    animation: flip 3s ease-in-out;
+}
+
+.pokedex-info-back-wrapper .pokedex-info-top{
+    z-index:1
 }
 
 .pokedex-info-back-wrapper .pokedex-info-top svg{
     will-change: filter;
     filter: var(--shadow);
-    animation: moveShadow 4s ease-in-out;
+    animation: moveShadow 2000s ease-in-out;
+
 }
 
 .pokedex-back{
@@ -969,10 +979,10 @@ progress[value]::-webkit-progress-value{
 
 @keyframes moveShadow {
     from{
-        filter: drop-shadow(0px -6px 6px rgba(0,0,0,.75));;
+        filter: drop-shadow(-2px -7px 3px rgba(0,0,0,.75));
     }
     to{
-        filter: drop-shadow(0px -6px 6px rgba(0,0,0,0));;
+        filter: drop-shadow(0px -6px 6px rgba(0,0,0,0));
     }
 }
 
