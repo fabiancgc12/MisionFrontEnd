@@ -887,7 +887,7 @@ progress[value]::-webkit-progress-value{
 .pokedex-info-back-wrapper .pokedex-info-top svg{
     will-change: filter;
     filter: var(--shadow);
-    animation: moveShadow 2000s ease-in-out;
+    animation: moveShadow 2s ease-in-out;
 
 }
 
