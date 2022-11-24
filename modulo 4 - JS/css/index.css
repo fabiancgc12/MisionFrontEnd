@@ -389,6 +389,7 @@ img{
     object-fit: cover;
 }
 
+.control-directions > * img[src=""],
 .control-directions > * img:not([src]){
     visibility: hidden;
 }
